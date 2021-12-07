@@ -87,16 +87,6 @@
          opacity: 0.3; }
 }
 
-/*@keyframes color {
-  from {background-color: #d00000;}
-  to {background-color: #0081a7;}
-}
-
-@keyframes color2 {
-  from {background-color: #8cff00;}
-  to {background-color: #1d2d44;}
-}*/
-
 @keyframes flash-1 {
   0%, 100% {
     background: #25a244;

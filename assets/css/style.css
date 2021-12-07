@@ -70,7 +70,6 @@ body {
 }
 
 #resultPage #layout {
-  overflow-y: visible;
   background: url(../images/common/result_bg.jpg) no-repeat center center;
   background-size: cover;
 }
@@ -366,6 +365,22 @@ input#click {
 
 /* RESULT PAGE START
 --------------------------------------------------*/
+#resultPage #layout.loaded
+{
+  overflow-y: visible;
+}
+
+#resultPage .main
+{
+  opacity: 0;
+}
+
+#resultPage #layout.loaded .main
+
+ {
+  opacity: 1;
+}
+
 #loader {
   position: absolute;
   top: 0;
@@ -375,6 +390,7 @@ input#click {
   background: url(../images/common/result_loading_bg.jpg) no-repeat center center;
   background-size: cover;
   z-index: 100;
+  overflow: hidden;
 }
 
 #loader.loaded {
@@ -512,6 +528,7 @@ input#click {
 
 .btn-wrapper {
   margin: 35px 0 20px 0;
+  display: flex;
 }
 
 .btn {
@@ -550,6 +567,23 @@ a.btn {
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
+
+.nomi-btn {
+  margin-left: 15px;
+}
+
+.nomi-btn:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -4px;
+  width: 148px;
+  height: 36px;
+  background-image: url(../images/common/btn_snow_02.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
 .event-info {
   width: 100%;
   max-width: 940px;
@@ -674,13 +708,8 @@ a.btn {
 .list-box {
   display: flex;
   align-items: center;
-  /*width: 100%;*/
   padding: 10px;
   border-bottom: 1px solid #EEEEEE;
-  /*border: 1px solid #EEEEEE;
-  border-radius: 5px;
-  box-shadow: 3px 3px 10px 0px #eeeeee;
-  margin-bottom: 15px;*/
   background-color: #ffffff;
 
   width: 50%;
@@ -752,6 +781,7 @@ a.btn {
   background-color: #1164AE;
   left: 50.7%;
   opacity: 0.4;
+  z-index: 10;
 }
 
 .list-container::-webkit-scrollbar {
@@ -860,13 +890,36 @@ a.btn {
   z-index: 10;
 }
 
+.walldecor .walldecor01,
+.walldecor .walldecor02 
+{
+  position: absolute;
+}
+
+.walldecor .walldecor01 {
+  top: 0;
+  left: 60px;
+}
+
+.walldecor .walldecor02 {
+  top: -18px;
+  right: 60px;
+}
+
+.window-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-top: 20px;
+}
+
 .main-window {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 423px;
-  background: url(../images/common/index_nomikai_window.jpg) no-repeat center;
+  background: url(../images/common/index_nomikai_window.png) no-repeat center;
   background-size: contain;
 }
 
@@ -884,6 +937,7 @@ a.btn {
 
 .nomikai-btn {
   margin-left: 21px;
+  margin-bottom: 20px;
   z-index: 90;
 }
 
@@ -912,6 +966,61 @@ a.btn {
 }
 /* NOMIKAI RESULT START
 --------------------------------------------------*/
+#nomikaiResult #loader {
+  background: url(../images/common/index_nomikai_bg.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#nomikaiResult .food-decor {
+  position: absolute;
+}
+
+.food-decor:nth-of-type(1) {
+  left: 20px;
+  top: -230px;
+}
+
+.food-decor:nth-of-type(2) {
+  left: 250px;
+  top: -150px;
+}
+
+.food-decor:nth-of-type(3) {
+  left: 320px;
+  top: -70px;
+}
+
+.food-decor:nth-of-type(4) {
+  left: 460px;
+  top: -280px;
+}
+
+.food-decor:nth-of-type(5) {
+  left: 652px;
+  top: -180px;
+}
+
+.food-decor:nth-of-type(6) {
+  left: 844px;
+  top: -110px;
+}
+.food-decor:nth-of-type(7) {
+  left: 970px;
+}
+.food-decor:nth-of-type(8) {
+  left: 1120px;
+  top: -310px;
+}
+.food-decor:nth-of-type(9) {
+  left: 1240px;
+  top: -380px;
+}
+
+.wrap-decor {
+  width: 100%;
+  height: 100%;
+}
+
 .group-wrapper {
   padding: 60px;
   background: url(../images/common/result_nomikai_bgd.jpg) no-repeat center center;
@@ -921,7 +1030,9 @@ a.btn {
 .group-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly; 
+  justify-content: space-evenly;
+  width: 1195px;
+  margin: 0 auto;
 }
 
 .group-list {
@@ -967,7 +1078,7 @@ a.btn {
 
 a.meet-link {
   display: block;
-  font-size: 21px;
+  font-size: 18px;
   padding: 20px;
   padding-top: 0;
   color: #FFFFFF;

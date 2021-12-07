@@ -14,6 +14,19 @@
 <body>
   <div id="nomikaiResult">
     <div id="layout">
+      <!--<div id="loader">
+        <div class="wrap-decor">
+          <img class="food-decor" src="assets/images/svg/food_decor01.svg">
+          <img class="food-decor" src="assets/images/svg/food_decor02.svg">
+          <img class="food-decor" src="assets/images/svg/food_decor03.svg">
+          <img class="food-decor" src="assets/images/svg/food_decor04.svg">
+          <img class="food-decor" src="assets/images/svg/food_decor05.svg">
+          <img class="food-decor" src="assets/images/svg/food_decor06.svg">
+          <img class="food-decor" src="assets/images/svg/food_decor07.svg">
+          <img class="food-decor" src="assets/images/svg/food_decor08.svg">
+          <img class="food-decor" src="assets/images/svg/food_decor09.svg">
+        </div>
+      </div>-->
       <div id="wrapper">
         <div class="main">
           <div class="content">
@@ -35,7 +48,22 @@
   </div>
   <!--JS-->
   <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/anime.min.js"></script>
   <script src="assets/js/gift-item.js"></script>
   <script src="assets/js/leaderlist.js"></script>
+  <script>
+     var giftLoadingAnim = anime.timeline();
+
+    giftLoadingAnim
+    .add({
+      targets: '.food-decor',
+      duration: 1600,
+      translateY: {
+        value: [-400,anime.random(570, 640)],
+        delay: anime.stagger(150, {from: anime.random(0, 9)} ),
+      },
+      easing: 'easeInOutCubic',
+    })
+  </script>
 </body>
 </html>

@@ -51,8 +51,11 @@
               <h2 class="info-ttl">"Every gift from a friend is a wish for your happiness."</h2>
               <div class="btn-wrapper flex">
                 <button onclick="window.print()" class="btn print-btn">
-                  Print
+                  PRINT
                 </button>
+                <a href="nomikai_index.html" class="btn nomi-btn">
+                  To Dinner Page
+                </a>
               </div>
             </div>
             <section id="event-results">
@@ -148,12 +151,19 @@
       opacity: [1,0],
       easing: 'easeInOutCubic'
     }, 0)
+    .add({
+      targets: '.list-box',
+      translateY: [400,0],
+      opacity: [0,1],
+      duration: 1200,
+      easing: 'easeInOutCubic'
+    })
 
     $(window).ready(function () {
       setInterval(() => {
-        $("#loader").addClass('loaded');
+        $("#loader, #layout").addClass('loaded');
         $('#snowAnim').removeClass('loading');
-      }, 7000);
+      }, 6800);
     });
   });
   </script>
