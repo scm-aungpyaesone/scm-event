@@ -202,7 +202,7 @@ for (let i = 0; i < managers.length; i++) {
 }
 $(".group-container").append(`<div class="group-list"> <div class="gp-head">Manager Group</div> 
       <ul class="gp-content"> ${managerList}
-      </ul> <a href="" class="meet-link">https://meet.google.com/aaa-aaa-bbb</a> </div>`)
+      </ul> <span class="meet-link">https://meet.google.com/aaa-aaa-bbb</span> </div>`)
 
 var index = 0;
 for (var i = 0; i < leaders.length; i++) {
@@ -220,5 +220,5 @@ for (var i = 0; i < leaders.length; i++) {
   }
   $(".group-container").append(`<div class="group-list"> <div class="gp-head">${leaders[i]}</div> 
       <ul class="gp-content"> ${memberList}
-      </ul> <a href="" class="meet-link">${meetlinks[i]}</a> </div>`)
+      </ul> <span class="meet-link">${meetlinks[i]}</span> </div>`)
 }

@@ -9,12 +9,17 @@
   <link rel="icon" href="assets/images/svg/ico_xmas.svg"/>
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/style.css"/>
-  <!--<link rel="stylesheet" href="assets/css/anim.css"/>-->
 </head>
 <body>
   <div id="nomikaiResult">
     <div id="layout">
-      <!--<div id="loader">
+      <div id="loader">
+        <div class="loading-anim">
+          <div class="loading-txt">
+            <span class="pairing">Pairing Members!</span>
+            <span class="enjoy">Enjoy you meal!</span>
+          </div>
+        </div>
         <div class="wrap-decor">
           <img class="food-decor" src="assets/images/svg/food_decor01.svg">
           <img class="food-decor" src="assets/images/svg/food_decor02.svg">
@@ -26,19 +31,18 @@
           <img class="food-decor" src="assets/images/svg/food_decor08.svg">
           <img class="food-decor" src="assets/images/svg/food_decor09.svg">
         </div>
-      </div>-->
+        <div class="jumping-dots-loader"> <span></span> <span></span> <span></span> </div>
+      </div>
       <div id="wrapper">
         <div class="main">
           <div class="content">
             <div class="group-wrapper">
               <div class="group-container">
-                <!--<div class="group-list">
-                  <div class="gp-head">Leader_01</div>
-                  <ul class="gp-content">
-                    <li><span>1.</span><span>Naw Khaing Khin Htoo Mon</span></li>
-                  </ul>
-                  <a href="" class="meet-link">https://meet.google.com/aaa-aaa-bbb</a>
-                </div>-->
+              </div>
+              <div class="btn-wrapper flex">
+                <button onclick="window.print()" class="btn print-btn">
+                  PRINT
+                </button>
               </div>
             </div>
           </div>
@@ -52,18 +56,75 @@
   <script src="assets/js/gift-item.js"></script>
   <script src="assets/js/leaderlist.js"></script>
   <script>
-     var giftLoadingAnim = anime.timeline();
+     var dinnerLoadingAnim = anime.timeline();
 
-    giftLoadingAnim
+    dinnerLoadingAnim
+    .add({
+      targets: '.loading-txt',
+      duration: 1200,
+      opacity: [0,1],
+      easing: 'easeOutCubic'
+    })
     .add({
       targets: '.food-decor',
       duration: 1600,
       translateY: {
-        value: [-400,anime.random(570, 640)],
+        value: [-400, 570], //570
         delay: anime.stagger(150, {from: anime.random(0, 9)} ),
       },
       easing: 'easeInOutCubic',
+    }, 0)
+    .add({
+      targets: '.food-decor',
+      duration: 800,
+      rotate: 360,
+      delay: anime.stagger(100, {from: anime.random(0, 9)}),
+      direction: 'alternate',
+      loop: true,
+      easing: 'easeInOutCubic',
+      endDelay: 2000,
     })
+    .add({
+      targets: '.food-decor',
+      duration: 1600,
+      translateY: {
+        value: [570, -200], //570
+        delay: anime.stagger(150, {from: anime.random(0, 9)} ),
+      },
+      easing: 'easeInOutCubic',
+      direction: 'alternate'
+    })
+    .add({
+      targets: '.jumping-dots-loader',
+      delay: 5400,
+      duration: 800,
+      opacity: [1,0],
+      easing: 'easeInOutCubic'
+    }, 0)
+    .add({
+      targets: '#loader',
+      delay: 8000,
+      duration: 800,
+      opacity: [1,0],
+      easing: 'easeInOutCubic'
+    }, 0)
+    .add({
+      targets: '.group-list',
+      translateY: [400,0],
+      opacity: [0,1],
+      delay: anime.stagger(100),
+      duration: 1200,
+      easing: 'easeInOutCubic'
+    })
+
+    $(window).ready(function () {
+      setInterval(() => {
+        $(".pairing, .enjoy").addClass('loaded');
+      }, 5000);
+      setInterval(() => {
+        $("#loader, #layout").addClass('loaded');
+      }, 8400);
+    });
   </script>
 </body>
 </html>
