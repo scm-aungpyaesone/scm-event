@@ -714,12 +714,6 @@ const gifts = [
       "gift_img": "sample_gift_01.jpg"
   },
   {
-      "name": "Thi Ta Win",
-      "gift": "Gift 01",
-      "profile_img": "thi_ta_win.jpg",
-      "gift_img": "sample_gift_01.jpg"
-  },
-  {
       "name": "Thura Naing",
       "gift": "Gift 01",
       "profile_img": "thura_naing.jpg",
@@ -759,12 +753,6 @@ const gifts = [
       "name": "Wah Wah Win Shwe Hlaing",
       "gift": "Gift 01",
       "profile_img": "wah_wah_win_shwe_hlaing.JPEG",
-      "gift_img": "sample_gift_01.jpg"
-  },
-  {
-      "name": "Wai Lin Phyo",
-      "gift": "Gift 01",
-      "profile_img": "wai_lin_phyo.JPG",
       "gift_img": "sample_gift_01.jpg"
   },
   {
