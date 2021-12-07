@@ -186,18 +186,34 @@ while (i--) {
     members.splice(j,1);
 }
 
+var managers = [
+  "Kyaw Soe Naing",
+  "Thin Muyar Win",
+  "Kyaw Htin Soe",
+  "Yan Myo Aung",
+  "Su Yee Win",
+  "Shwe Yi Pyae Soan",
+  "Myat Mon Thein",
+  "Zin May Thu"
+]
+var managerList = "";
+for (let i = 0; i < managers.length; i++) {
+  managerList += `<li><span>${i+1}.</span><span>${managers[i]}</span></li>`;
+}
+$(".group-container").append(`<div class="group-list"> <div class="gp-head">Manager Group</div> 
+      <ul class="gp-content"> ${managerList}
+      </ul> <a href="" class="meet-link">https://meet.google.com/aaa-aaa-bbb</a> </div>`)
+
 var index = 0;
 for (var i = 0; i < leaders.length; i++) {
   var memberList = "";
   if (i < 5) {
     for (let j = 0; j < 10; j++) {
-      console.log(index)
       memberList += `<li><span>${j+1}.</span><span>${randomMembers[index]}</span></li>`;
       index += 1;
     }
   } else {
     for (let j = 0; j < 9; j++) {
-      console.log(index)
       memberList += `<li><span>${j+1}.</span><span>${randomMembers[index]}</span></li>`;
       index += 1;
     }
