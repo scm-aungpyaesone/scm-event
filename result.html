@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gift Exchange App</title>
+  <!--CSS-->
+  <link rel="icon" href="assets/images/svg/ico_xmas.svg"/>
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="stylesheet" href="assets/css/anim.css"/>
+</head>
+<body>
+  <div id="resultPage">
+    <div id="layout">
+      <canvas id="snowAnim" class="loading"></canvas>
+      <div id="loader">
+        <div class="loading-anim">
+          <div class="top-decor">
+            <img class="loading-decor" src="assets/images/svg/loading_asset01.svg">
+            <img class="loading-decor" src="assets/images/svg/loading_asset07.svg">
+            <img class="loading-decor" src="assets/images/svg/loading_asset02.svg">
+            <img class="loading-decor" src="assets/images/svg/loading_asset08.svg">
+            <img class="loading-decor" src="assets/images/svg/loading_asset03.svg">
+            <img class="loading-decor" src="assets/images/svg/loading_asset09.svg">
+            <img class="loading-decor" src="assets/images/svg/loading_asset04.svg">
+            <img class="loading-decor" src="assets/images/svg/loading_asset10.svg">
+            <img class="loading-decor" src="assets/images/svg/loading_asset05.svg">
+            <img class="loading-decor" src="assets/images/svg/loading_asset11.svg">
+            <img class="loading-decor" src="assets/images/svg/loading_asset06.svg">
+          </div>
+          <div class="loading-txt">
+            <span>Finding your gift!</span>
+          </div>
+          <div class="jumping-dots-loader"> <span></span> <span></span> <span></span> </div>
+        </div>
+      </div>
+      <div class="header">
+        <div class="head_inner flex">
+          <h1 class="logo">
+            <img src="assets/images/svg/logo_xmas.svg" alt="SCM Logo">
+          </h1>
+        </div>
+      </div> <!--/.header-->
+      <div id="wrapper">
+        <!--<canvas id="snowAnim"></canvas>-->
+        <div class="main">
+          <div class="content">
+            <div class="event-info">
+              <h2 class="info-ttl">"Every gift from a friend is a wish for your happiness."</h2>
+              <div class="btn-wrapper flex">
+                <button onclick="window.print()" class="btn print-btn">
+                  Print
+                </button>
+              </div>
+            </div>
+            <section id="event-results">
+              <div class="results-wrapper">
+                <div class="results-container">
+                  <div class="list-wrapper">
+                    <div class="list-head list-box">
+                      <div class="left-box">
+                        <span class="num-ttl li-inner">
+                          #
+                        </span>
+                        <span class="receiver-ttl li-inner">
+                          Name
+                        </span>
+                        <span class="gift-ttl li-inner">
+                          Received Gift
+                        </span>
+                      </div>
+                      <div class="right-box">
+                        <span class="num-ttl li-inner">
+                          #
+                        </span>
+                        <span class="receiver-ttl li-inner">
+                          Name
+                        </span>
+                        <span class="gift-ttl li-inner">
+                          Received Gift
+                        </span>
+                      </div>
+                    </div>
+                    <div class="list-container">
+                      <div class="divider"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--JS-->
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/gift-item.js"></script>
+  <script src="assets/js/gift.js"></script>
+  <script src="assets/js/TweenMax.min.js"></script>
+  <script src="assets/js/anime.min.js"></script>
+  <script src="assets/js/anim.js"></script>
+  <script>
+    $(document).ready(function () {
+    var scrollTop     = $(window).scrollTop(),
+      elementOffset = $('.results-wrapper').offset().top,
+      distance = (elementOffset - scrollTop);
+    console.log("distance",distance);
+    
+    $(window).scroll(function (e) {
+      var $el = $('.results-wrapper');
+      var isPositionFixed = ($el.css('position') == 'fixed');
+      if ($(this).scrollTop() > 314 && !isPositionFixed) {
+        $el.css({ 'position': 'fixed', 'top': '0px', 'left' : '0px', 'right' : '0px' });
+      }
+      if ($(this).scrollTop() < 314 && isPositionFixed) {
+        $el.css({ 'position': 'relative', 'top': '0px'});
+      }
+    }); 
+
+    var giftLoadingAnim = anime.timeline();
+
+    giftLoadingAnim
+    .add({
+      targets: '.loading-decor',
+      duration: 1600,
+      translateY: {
+        value: [-280,0],
+        delay: anime.stagger(100),
+      },
+      easing: 'easeInOutCubic',
+    })
+    .add({
+      targets: '.loading-decor',
+      duration: 1600,
+      translateY: {
+        value: [0, -280],
+        delay: anime.stagger(100, {from:'last'}),
+      },
+      easing: 'easeInOutCubic',
+    }, 4400)
+    .add({
+      targets: '#loader',
+      delay: 6000,
+      duration: 800,
+      opacity: [1,0],
+      easing: 'easeInOutCubic'
+    }, 0)
+
+    $(window).ready(function () {
+      setInterval(() => {
+        $("#loader").addClass('loaded');
+        $('#snowAnim').removeClass('loading');
+      }, 7000);
+    });
+  });
+  </script>
+</body>
+</html>

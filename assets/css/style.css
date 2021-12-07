@@ -1,0 +1,1054 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: "ChristmasBless";
+  src: url(../fonts/ChristmasBless.ttf);
+}
+
+@font-face {
+  font-family: "HeyOctober";
+  src: url(../fonts/HeyOctober.ttf);
+}
+
+@font-face {
+  font-family: 'Notosans JP';
+  font-weight: 400;
+  font-style: normal;
+  src: url(../fonts/NotoSansJP-Regular.otf);
+}
+
+@font-face {
+  font-family: 'Lato Bold';
+  font-weight: 700;
+  font-style: normal;
+  src: url(../fonts/Lato-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'FuturaPTM';
+  font-weight: 700;
+  font-style: normal;
+  src: url(../fonts/FuturaPTMedium.otf);
+}
+
+@font-face {
+  font-family: 'Marcellus';
+  font-weight: 700;
+  font-style: normal;
+  src: url(../fonts/Marcellus-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'BerkshireSwash';
+  font-weight: 400;
+  font-style: normal;
+  src: url(../fonts/BerkshireSwash-Regular.ttf); 
+}
+
+@font-face {
+  font-family: 'Gabriola';
+  font-weight: 400;
+  font-style: normal;
+  src: url(../fonts/Gabriola.ttf);
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Notosans JP';
+}
+
+#layout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: url(../images/common/index_bg.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#resultPage #layout {
+  overflow-y: visible;
+  background: url(../images/common/result_bg.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#nomikaiIndex #layout {
+  background: url(../images/common/index_nomikai_bg.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#nomikaiResult #layout {
+  overflow: visible;
+  background-image: none;
+  background-color: #1B3755;
+}
+
+.artboard {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.title-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.snow-board {
+  position: absolute;
+  width: 365px;
+  height: 415px;
+  top: -45px;
+  background: url(../images/common/index_board.png) no-repeat center;
+  background-size: contain;
+  color: #FFFFFF;
+  text-align: center;
+  z-index: 20;
+}
+
+.ttl {
+  position: absolute;
+  display: flex;
+  top: 205px;
+  width: 365px;
+  height: 190px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.globe-txt {
+  position: absolute;
+  bottom: 40px;
+  display: block;
+  width: 100%;
+  font-family: "ChristmasBless";
+  font-size: 24px;
+  color: #1B3755;
+  text-align: center;
+}
+
+#gift {
+  position: absolute;
+  top: 163px;
+  right: 10px;
+  z-index: 99;
+}
+
+.gift-wrapper {
+  transform: scale(0.6);
+  transition: transform .2s ease;
+  cursor: pointer;
+}
+
+/*.gift-wrapper:hover {
+  transform: rotate(-10deg) scale(0.6) !important;
+}*/
+
+.gift-wrapper.ready {
+  transform: rotate(0deg) scale(0.6) !important;
+}
+
+.giftbox {
+  position: relative;
+}
+
+.giftbox:before {
+  content:"";
+  position: absolute;
+  width: 170px;
+  height:20px;
+  border-radius:50%;
+  background-color: rgba(0,0,0,0.4);
+  top:90px;
+  left:-10px;
+}
+
+.gift {
+  position: relative;
+  width: 150px;
+  height: 100px;
+  background-color: #FFFFFF;
+}
+
+.gift:before {
+  content:"";
+  position: absolute;
+  width: 25px;
+  height: 100px;
+  background-color: #6483B3;
+  left:62px;
+}
+
+.gift:after {
+  content:"";
+  position: absolute;
+  box-shadow: inset 0 10px rgba(0,0,0,0.3);
+  width: 150px;
+  height: 100px;
+}
+
+.gift-txt {
+  display: block;
+  position: absolute;
+  font-family: "HeyOctober";
+  color: #FFFFFF;
+  font-size: 24px;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+input#click {
+  display: none;
+}
+
+.click {
+  position: absolute;
+  background-color: #FFFFFF;
+  width: 170px;
+  height: 40px;
+  top:-40px;
+  left:-10px;
+  transform-origin: bottom left;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.click:before {
+  content:"";
+  position: absolute;
+  width: 25px;
+  height: 40px;
+  background-color: #6483B3;
+  left:69px;
+}
+
+.click:after {
+  content:"";
+  position: absolute;
+  width: 5px;
+  height: 0;
+  border-bottom: 30px solid #6483B3;
+  border-top: 30px solid #6483B3;
+  border-left: 0px solid transparent;
+  border-right: 30px solid transparent;
+  transform: rotate(-90deg);
+  left:65px;
+  top:-47px;
+}
+
+.wishes {
+  position: absolute;
+  transition: .5s;
+  color: #FFFFFF;
+  font-size: 28px;
+  font-family: segoe script;
+  text-align: center;
+  z-index:-1;
+  left:5px;
+  text-decoration: none;
+}
+
+.gift-wrapper.ready  .click {
+  transform: rotate(-110deg) scaleX(0.85);
+}
+
+.gift-wrapper.ready  .wishes {
+  transform: translateY(-100px);
+}
+
+.gift-wrapper.ready  .sparkles {
+  display: block;
+}
+
+.sparkles {
+  position: absolute;
+  display: none;
+  top:-15px;
+  z-index:-2;
+  left:40px;
+}
+
+.spark1, .spark2, .spark3, .spark4, .spark5, .spark6 {
+  position: absolute;
+  background-color: #fee440;
+  border-radius:50%;
+  top:-9px;
+  z-index:-1;
+}
+
+.spark1 {
+  width: 8px;
+  height:8px;
+  left:30px;
+  top:-9px;
+  animation: fire 0.9s ease-in-out infinite, color 0.4s linear infinite;
+}
+
+.spark1:before {
+  content:"";
+  position: absolute;
+  width:5px;
+  height:5px;
+  top:8px;
+  left:11px;
+  background-color: #fee440;
+  border-radius:50%;
+}
+
+.spark2 {
+  width: 9px;
+  height:9px;
+  left:33px;
+  top:-5px;
+  animation: fire2 0.28s ease-in-out infinite, color 0.4s linear infinite;
+}
+
+.spark2:before {
+  content:"";
+  position: absolute;
+  width:5px;
+  height:5px;
+  top:12px;
+  left:3px;
+  background-color: #fee440;
+  border-radius:50%;
+}
+
+.spark3 {
+  width: 8.5px;
+  height:8.5px;
+  left:33px;
+  top:-5px;
+  animation: fire3 0.36s ease-in-out infinite, color2 0.4s linear infinite;
+}
+
+.spark3:before {
+  content:"";
+  position: absolute;
+  width:5px;
+  height:5px;
+  top:12px;
+  left:-1px;
+  background-color: #fee440;
+  border-radius:50%;
+}
+
+.spark4 {
+  width: 7px;
+  height:7px;
+  left:27px;
+  top:-5px;
+  animation: fire2 0.24s ease-in-out infinite, color2 0.2s linear infinite;
+}
+
+.spark5 {
+  width: 7px;
+  height:7px;
+  left:29px;
+  top:-5px;
+  animation: fire3 0.45s ease-in-out infinite, color 0.2s linear infinite;
+}
+
+.spark6 {
+  width: 6px;
+  height:6px;
+  left:29px;
+  top:-5px;
+  animation: fire 0.35s ease-in-out infinite, color2 0.2s linear infinite;
+}
+
+/* RESULT PAGE START
+--------------------------------------------------*/
+#loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/common/result_loading_bg.jpg) no-repeat center center;
+  background-size: cover;
+  z-index: 100;
+}
+
+#loader.loaded {
+  display: none;
+}
+
+.loading-anim {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-txt {
+  font-family: 'Marcellus';
+  font-size: 26px;
+  color: #FFFFFF;
+}
+
+.jumping-dots-loader {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.jumping-dots-loader span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: #FFFFFF;
+  margin: 35px 5px
+}
+
+.jumping-dots-loader span:nth-child(1) {
+  animation: bounce 1s ease-in-out infinite
+}
+
+.jumping-dots-loader span:nth-child(2) {
+  animation: bounce 1s ease-in-out 0.33s infinite
+}
+
+.jumping-dots-loader span:nth-child(3) {
+  animation: bounce 1s ease-in-out 0.66s infinite
+}
+
+@keyframes bounce {
+
+  0%,
+  75%,
+  100% {
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -o-transform: translateY(0);
+      transform: translateY(0)
+  }
+
+  25% {
+      -webkit-transform: translateY(-20px);
+      -ms-transform: translateY(-20px);
+      -o-transform: translateY(-20px);
+      transform: translateY(-20px)
+  }
+}
+
+#resultPage #snowAnim.loading {
+  z-index: 101;
+}
+
+.top-decor {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  padding: 0 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+#wrapper {
+  width: 100%;
+  height: 100vh;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+
+#resultPage .main {
+  padding-top: 30px;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: auto;
+}
+
+.head_inner {
+  width: 100%;
+  max-width: 940px;
+  height: 96px;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  margin: 0 auto;
+}
+
+.head_inner h1.logo {
+  position: relative;
+  left: -32px;
+  width: 85px;
+  height: 74px;
+}
+
+.head_inner h1.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.btn-wrapper {
+  margin: 35px 0 20px 0;
+}
+
+.btn {
+  position: relative;
+  width: 140px;
+  height: 48px;
+  font-family: "Lato Bold";
+  font-size: 16px;
+  background-color: #5978A5;
+  color: #ffffff;
+  padding: 0;
+  border-radius: 10px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+a.btn {
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.print-btn:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -4px;
+  width: 148px;
+  height: 36px;
+  background-image: url(../images/common/btn_snow_01.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.event-info {
+  width: 100%;
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.event-info h2.info-ttl {
+  font-family: "Marcellus";
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.event-info .info-txt {
+  font-family: "Notosans JP";
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 45%;
+}
+
+.event-info .print-btn {
+  margin-left: 10px;
+}
+
+#event-results {
+  width: 100%;
+  height: 100%;
+  color: #1164AE;
+}
+
+.results-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 940px;
+  height: calc(100% + 5px);;
+  margin: 0 auto;
+}
+
+.results-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: #FFFFFF;
+  border: 2px solid #1164AE;
+  border-radius: 20px 20px 0 0;
+}
+
+.list-wrapper {
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+  padding-bottom: 0px;
+}
+
+.list-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -10px;
+  width: 75px;
+  height: 72px;
+  background-image: url(../images/common/list_snow_01.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.list-wrapper::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  right: 5px;
+  width: 496px;
+  height: 50px;
+  background-image: url(../images/common/list_snow_02.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.list-container {
+  max-height: calc(100vh - 90px);
+  padding-bottom: 20px;
+  overflow-y: scroll;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.list-head {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.left-box,
+.right-box
+{
+  display: flex;
+  width: 50%;
+}
+
+.left-box {
+  padding-right: 10px;
+}
+
+.right-box {
+  padding-left: 10px;
+}
+
+.list-head.list-box {
+  width: 100%;
+  padding: 15px 10px;
+  border: 1px solid #EEEEEE;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px 0px #eeeeee;
+  margin-bottom: 15px;
+  justify-content: space-between;
+}
+
+.list-box {
+  display: flex;
+  align-items: center;
+  /*width: 100%;*/
+  padding: 10px;
+  border-bottom: 1px solid #EEEEEE;
+  /*border: 1px solid #EEEEEE;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px 0px #eeeeee;
+  margin-bottom: 15px;*/
+  background-color: #ffffff;
+
+  width: 50%;
+}
+
+.list-head .num-ttl,
+.list-container .num-detail 
+{
+  width: 15%;
+  max-width: 36px;
+  text-align: center;
+}
+
+.list-head .receiver-ttl,
+.list-container .receiver-detail 
+{
+  /*width: 40%;*/
+  width: 55%;
+}
+
+.list-head .gift-ttl {
+  margin-left: -3px;
+}
+
+.list-box {
+  font-size: 14px;
+}
+
+.list-box:last-child {
+  margin-bottom: 0;
+}
+
+.li-inner {
+  padding: 0 20px;
+  line-height: 2;
+}
+
+.receiver-detail,
+.gift-detail 
+{
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+}
+
+.gift-detail {
+  width: 50%;
+  justify-content: space-between;
+  padding-right: 0px;
+}
+.receiver-detail .receiver-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.gift-detail .gift-img {
+  width: 65px;
+  height: 65px;
+  border-radius: 5px;
+}
+
+.divider {
+  position: absolute;
+  width: 1px;
+  height: calc(100% - 105px);
+  background-color: #1164AE;
+  left: 50.7%;
+  opacity: 0.4;
+}
+
+.list-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+.list-container::-webkit-scrollbar-track {
+  background: #ffffff; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+.list-container::-webkit-scrollbar-thumb {
+  background: #1164AE;
+  border-radius: 10px; 
+}
+
+/* Handle on hover */
+.list-container::-webkit-scrollbar-thumb:hover {
+  background: #1164AE; 
+}
+
+.christmas-light {
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  margin: -15px 0 0 0;
+  padding: 0;
+  pointer-events: none;
+  width: 100%;
+}
+.christmas-light li {
+  position: relative;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  list-style: none;
+  padding: 0;
+  width: 12px;
+  height: 28px;
+  border-radius: 50%;
+  margin: 20px;
+  display: inline-block;
+  background: #25a244;
+  box-shadow: 0px 4.6666666667px 24px 3px #25a244;
+  animation-name: flash-1;
+  animation-duration: 2s;
+}
+.christmas-light li:nth-child(2n+1) {
+  background: #fcba39;
+  box-shadow: 0px 4.6666666667px 24px 3px #fcba39;
+  animation-name: flash-2;
+  animation-duration: 0.4s;
+}
+.christmas-light li:nth-child(4n+2) {
+  background: #d90429;
+  box-shadow: 0px 4.6666666667px 24px 3px #d90429;
+  animation-name: flash-3;
+  animation-duration: 1.1s;
+}
+.christmas-light li:nth-child(odd) {
+  animation-duration: 1.8s;
+}
+.christmas-light li:nth-child(3n+1) {
+  animation-duration: 1.4s;
+}
+.christmas-light li:before {
+  content: "";
+  position: absolute;
+  background: #222;
+  width: 10px;
+  height: 9.3333333333px;
+  border-radius: 3px;
+  top: -4.6666666667px;
+  left: 1px;
+}
+.christmas-light li:after {
+  content: "";
+  top: -14px;
+  left: 9px;
+  position: absolute;
+  width: 52px;
+  height: 18.6666666667px;
+  border-bottom: solid #222 2px;
+  border-radius: 50%;
+}
+.christmas-light li:last-child:after {
+  content: none;
+}
+.christmas-light li:first-child {
+  margin-left: -40px;
+}
+
+/* NOMIKAI PAGE START
+--------------------------------------------------*/
+.walldecor {
+  position: absolute;
+  top: -61px;
+  left: 0;
+  width: 100%;
+  height: 270px;
+  background: url(../images/common/index_nomikai_decor.png) no-repeat center;
+  background-size: contain;
+  z-index: 10;
+}
+
+.main-window {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 423px;
+  background: url(../images/common/index_nomikai_window.jpg) no-repeat center;
+  background-size: contain;
+}
+
+.dinner {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  bottom: 15px;
+}
+
+.visual-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.nomikai-btn {
+  margin-left: 21px;
+  z-index: 90;
+}
+
+.nomikai-btn a {
+  position: relative;
+  display: block;
+  transition: all .8s ease;
+}
+
+.nomikai-btn a:hover {
+  transform: translateY(-10px);
+}
+
+.nomikai-btn a .plate-decor {
+  position: absolute;
+  opacity: 0;
+  top: 55px;
+  left: 55px;
+  transform: scale(0.3);
+  transition: all .8s ease-out;
+}
+
+.nomikai-btn a:hover .plate-decor {
+  opacity: 1;
+  transform: scale(1);
+}
+/* NOMIKAI RESULT START
+--------------------------------------------------*/
+.group-wrapper {
+  padding: 60px;
+  background: url(../images/common/result_nomikai_bgd.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.group-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; 
+}
+
+.group-list {
+  width: calc(25% - 20px);
+  height: auto;
+  font-family: 'Gabriola';
+  color: #FFFFFF;
+  border-radius: 20px;
+  border: 1px solid #FFFFFF;
+  background-color: rgba(36, 63, 94, 0.3);
+  -webkit-backdrop-filter: saturate(110%) blur(30px);
+  backdrop-filter: saturate(110%) blur(30px);
+  margin-bottom: 25px;
+}
+
+.gp-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 38px;
+  font-family: 'BerkshireSwash';
+  font-size: 18px;
+  background-color:  #25405F;
+  border-radius: 20px 20px 0 0;
+  border-bottom: 1px solid #FFFFFF;
+}
+
+.gp-content {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+}
+
+.gp-content li {
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+.gp-content li span {
+  margin-right: 10px;
+}
+
+a.meet-link {
+  display: block;
+  font-size: 21px;
+  padding: 20px;
+  padding-top: 0;
+  color: #FFFFFF;
+}
+
+
+@media print {
+
+  .header {
+    display: none;
+  }
+
+  #resultPage #layout {
+    background-image: none;
+    background-color: #1B3755;
+    overflow: visible;
+    position: relative;
+  }
+
+  canvas {
+    display: none;
+  }
+
+  .event-info {
+    width: 90%;
+  }
+
+  .results-wrapper {
+    position: relative;
+    width: 90%;
+    height: 100%;
+  }
+
+  .results-container {
+    border: none;
+  }
+
+  .li-inner {
+    padding:  0;
+  }
+
+  .list-wrapper {
+    border: 2px solid #1164AE;
+    border-radius: 20px 20px 0 0;
+    padding: 1rem;
+  }
+
+  .list-wrapper::before,
+  .list-wrapper::after 
+  {
+    display: none;
+  }
+
+  .list-container {
+    max-height: none;
+    overflow-y: visible;
+  }
+
+  .list-box:nth-of-type(13n),
+  .list-box:nth-of-type(14n) 
+  {
+    padding-bottom: 30px;
+  }
+
+  .event-info h2.info-ttl {
+    color: #1164AE;
+  }
+  .event-info .btn {
+    display: none;
+  }
+
+  .gift-detail {
+    flex-direction: column;
+  }
+
+}
+
+@media only screen and (min-width: 1920px) {
+  .walldecor {
+    background: url(../images/common/index_nomikai_decor.png) center;
+    background-size: contain;
+  }
+}
+

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gift Exchange App</title>
+  <!--CSS-->
+  <link rel="icon" href="assets/images/svg/ico_xmas.svg"/>
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="stylesheet" href="assets/css/anim.css"/>
+</head>
+<body>
+  <div id="index">
+    <div id="layout">
+      <div class="artboard">
+        <ul class="christmas-light"></ul>
+        <canvas id="snowAnim"></canvas>
+        <div class="title-wrapper">
+          <div class="snow-board swing"></div>
+        </div>
+        <div id="globe">
+          <canvas id="town"></canvas>
+          <canvas id="snowFlakes"></canvas>
+        </div>
+        <!--<span class="globe-txt">Tap to shake snow globe</span>-->
+      </div>
+      <div id="gift">
+        <div class="gift-wrapper">
+          <div class="giftbox">
+            <div class="gift">
+              <input id='click' type='checkbox'>
+              <label class='click' for='click'></label>
+              <a href="result.html" class="wishes">Pick Gifts Now!</a>
+              <div class="sparkles">
+                <div class="spark1"></div>
+                <div class="spark2"></div>
+                <div class="spark3"></div>
+                <div class="spark4"></div>
+                <div class="spark5"></div>
+                <div class="spark6"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="gift-txt">
+          Tap Here!
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+  <!--JS-->
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/TweenMax.min.js"></script>
+  <script src="assets/js/anime.min.js"></script>
+  <script src="assets/js/anim.js"></script>
+  <script>
+    $(".gift-wrapper, .gift-txt, .click").on("click", function(){
+      $(".gift-wrapper").toggleClass("ready");
+    });
+
+    for(let i = 0; i < 45; i++) {
+      $(".christmas-light")
+      .append('<li></li>')
+    }
+  </script>
+</body>
+</html>
