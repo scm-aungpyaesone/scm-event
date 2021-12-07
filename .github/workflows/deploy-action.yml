@@ -1,0 +1,23 @@
+name: Deployment for SCM Event App
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Deploy to production
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_STAGING_HOST }}
+          username: ${{ secrets.SSH_STAGING_USERNAME }}
+          key: ${{ secrets.SSH_STAGING_KEY }}
+          port: 22
+          script: |
+            cd ~/work/scm-event && sh deploy.sh
