@@ -24,8 +24,8 @@ while (arr1.length) {
 
   listnum++;
 
-  $(".list-container").append(`<div class="list-box"> <div class="num-detail li-inner"> ` + 
+  $(".list-container").append(`<div class="listo"> <div class="list-box"> <div class="num-detail li-inner"> ` + 
   listnum +`</div> <div class="receiver-detail li-inner"> <img class="receiver-img" src="assets/images/members/${receiver.profile_img}"> <div class="receiver-name">` + 
   receiver.name  + `</div></div> <div class="gift-detail li-inner"> <div class="gift-name">` + 
-  gift.staff_id + `</div> <img class="gift-img" src="assets/images/gifts/${gift.gift_img}"> </div> </div>`)
+  gift.staff_id + `</div> <img class="gift-img" src="assets/images/gifts/${gift.gift_img}"> </div> </div> </div>`)
 }

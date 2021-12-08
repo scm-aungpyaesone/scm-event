@@ -71,7 +71,7 @@ body {
 
 #resultPage #layout {
   background: url(../images/common/result_bg.jpg) no-repeat center center;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 #nomikaiIndex #layout {
@@ -710,14 +710,17 @@ a.btn {
   justify-content: space-between;
 }
 
+.listo {
+  width: 50%;
+}
+
 .list-box {
   display: flex;
   align-items: center;
   padding: 10px;
   border-bottom: 1px solid #EEEEEE;
   background-color: #ffffff;
-
-  width: 50%;
+  width: 100%;
 }
 
 .list-head .num-ttl,
@@ -1184,10 +1187,17 @@ a.btn {
     overflow-y: visible;
   }
 
-  .list-box:nth-of-type(13n),
-  .list-box:nth-of-type(14n) 
-  {
-    padding-bottom: 30px;
+  /*.group-wrapper {
+    background-image: none;
+    background: #1B3755;
+  }*/
+
+  .list-container {
+    display: table;
+  }
+
+  .list-container .listo {
+    display: inline-block;
   }
 
   .event-info h2.info-ttl {
@@ -1206,15 +1216,34 @@ a.btn {
     flex-direction: column;
   }
 
+  .group-container {
+    display: table;
+    page-break-after: always;
+  }
+
   .group-list {
+    display: inline-block;
     width: calc(50% - 15px);
     max-width: 340px;
     backdrop-filter: none;
     color: #1164AE;
     border: 1px solid #1164AE;
     background-color: #FFFFFF;
+    margin-right: 15px;
   }
   
+  .group-list:first-of-type {
+    position: relative;
+    top: -65px;
+    height: 450px;
+  }
+
+  .group-list:nth-of-type(5n),
+  .group-list:nth-of-type(6n)
+  {
+    margin-top: 60px;
+  }
+
   .gp-head {
     color: #FFFFFF;
   }
