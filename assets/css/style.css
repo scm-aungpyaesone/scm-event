@@ -364,6 +364,19 @@ input#click {
   overflow-y: visible;
 }
 
+#resultPage #layout::before {
+  content: '';
+  position: fixed;
+  display: block;
+  top: -60px;
+  right: 80px;
+  width: 252px;
+  height: 252px;
+  background: url(../images/common/result_santa.png) no-repeat center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 #resultPage .main {
   opacity: 0;
 }
