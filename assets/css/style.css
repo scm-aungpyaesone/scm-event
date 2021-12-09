@@ -56,6 +56,7 @@ body {
   width: 100%;
   height: 100%;
   font-family: 'Notosans JP';
+  background-color: #1B3755;
 }
 
 #layout {
@@ -71,7 +72,7 @@ body {
 
 #resultPage #layout {
   background: url(../images/common/result_bg.jpg) no-repeat center center;
-  background-size: 100% 100%;
+  background-size: cover;
 }
 
 #nomikaiIndex #layout {
@@ -360,11 +361,37 @@ input#click {
 
 /* RESULT PAGE START
 --------------------------------------------------*/
-#resultPage #layout.loaded {
+/*#resultPage #layout.loaded {
   overflow-y: visible;
+}*/
+
+#resultPage .main,
+#resultPage .header 
+{
+  opacity: 0;
+  transition: opacity .8s ease;
 }
 
-#resultPage #layout::before {
+#resultPage #layout.loaded .main,
+#resultPage #layout.loaded .header 
+{
+  opacity: 1;
+}
+
+#resultPage .main::before {
+  content: '';
+  position: fixed;
+  display: block;
+  top: -5px;
+  left: -50px;
+  width: 318px;
+  height: 474px;
+  background: url(../images/common/result_decor_balls.png) no-repeat center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#resultPage .main::after {
   content: '';
   position: fixed;
   display: block;
@@ -372,17 +399,9 @@ input#click {
   right: 80px;
   width: 252px;
   height: 252px;
-  background: url(../images/common/result_santa.png) no-repeat center;
+  background: url(../images/common/result_decor_santa.png) no-repeat center;
   background-repeat: no-repeat;
   background-size: contain;
-}
-
-#resultPage .main {
-  opacity: 0;
-}
-
-#resultPage #layout.loaded .main {
-  opacity: 1;
 }
 
 #loader {
@@ -391,7 +410,7 @@ input#click {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(../images/common/result_loading_bg.jpg) no-repeat center center;
+  background: url(../images/common/result_bg.jpg) no-repeat center center;
   background-size: cover;
   z-index: 100;
   overflow: hidden;
@@ -447,25 +466,6 @@ input#click {
   animation: bounce 1s ease-in-out 0.66s infinite
 }
 
-@keyframes bounce {
-
-  0%,
-  75%,
-  100% {
-      -webkit-transform: translateY(0);
-      -ms-transform: translateY(0);
-      -o-transform: translateY(0);
-      transform: translateY(0)
-  }
-
-  25% {
-      -webkit-transform: translateY(-20px);
-      -ms-transform: translateY(-20px);
-      -o-transform: translateY(-20px);
-      transform: translateY(-20px)
-  }
-}
-
 #resultPage #snowAnim.loading {
   z-index: 101;
 }
@@ -490,10 +490,6 @@ input#click {
   width: 100%;
   height: 100%;
   z-index: 99;
-}
-
-#resultPage .main {
-  padding-top: 30px;
 }
 
 .content {
@@ -593,6 +589,7 @@ a.btn {
   width: 100%;
   max-width: 940px;
   margin: 0 auto;
+  padding-top: 30px;
 }
 
 .event-info h2.info-ttl {
@@ -614,7 +611,7 @@ a.btn {
   margin-left: 10px;
 }
 
-#event-results {
+#eventResults {
   width: 100%;
   height: 100%;
   color: #1164AE;
@@ -624,8 +621,9 @@ a.btn {
   position: relative;
   width: 100%;
   max-width: 940px;
-  height: calc(100% + 5px);;
+  height: calc(100% + 45px);
   margin: 0 auto;
+  z-index: 100;
 }
 
 .results-container {
@@ -636,14 +634,15 @@ a.btn {
   height: auto;
   background-color: #FFFFFF;
   border: 2px solid #1164AE;
-  border-radius: 20px 20px 0 0;
+  /*border-radius: 20px 20px 0 0;*/
+  border-radius: 20px;
 }
 
 .list-wrapper {
   width: 100%;
   height: auto;
   padding: 2rem;
-  padding-bottom: 0px;
+  padding-bottom: 25px;
 }
 
 .list-wrapper::before {
@@ -671,10 +670,9 @@ a.btn {
 }
 
 .list-container {
-  max-height: calc(100vh - 90px);
-  padding-bottom: 20px;
+  max-height: calc(65vh - 90px);
+  /*padding-bottom: 20px;*/
   overflow-y: scroll;
-
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -784,7 +782,7 @@ a.btn {
 .divider {
   position: absolute;
   width: 1px;
-  height: calc(100% - 105px);
+  height: calc(100% - 135px);
   background-color: #1164AE;
   left: 50.7%;
   opacity: 0.4;
@@ -1007,7 +1005,7 @@ a.btn {
   margin-bottom: 10px;
 }
 #nomikaiResult #loader {
-  background: url(../images/common/index_nomikai_bg.jpg) no-repeat center center;
+  background: url(../images/common/result_nomikai_loading_bg.jpg) no-repeat center center;
   background-size: cover;
 }
 
@@ -1036,8 +1034,8 @@ a.btn {
   top: -69px;
 }
 .food-decor:nth-of-type(6) {
-  left: 943px;
-  top: -120px;
+  left: 1115px;
+  top: -105px;
 }
 .food-decor:nth-of-type(7) {
   left: 980px;
@@ -1061,14 +1059,20 @@ a.btn {
   padding: 60px;
   background: url(../images/common/result_nomikai_bgd.jpg) no-repeat center center;
   background-size: cover;
+  background-position-y: top;
+  max-height: 1615px;
+  overflow-y: hidden;
+}
+
+.group-wrapper.loaded {
+  max-height: none;
+  overflow-y: visible;
 }
 
 .group-wrapper .btn-wrapper {
+  width: 100%;
+  max-width: 1195px;
   justify-content: flex-end;
-}
-
-.group-wrapper .print-btn {
-  margin-right: 2rem;
 }
 
 .group-wrapper .print-btn:before {
@@ -1141,7 +1145,8 @@ a.btn {
   }
 
   #resultPage #layout {
-    background-color: #1B3755 !important;
+    background-image: none;
+    background-color: #FFFFFF !important;
     background-repeat: repeat-y;
     overflow: visible;
     position: relative;
@@ -1186,11 +1191,6 @@ a.btn {
     max-height: none;
     overflow-y: visible;
   }
-
-  /*.group-wrapper {
-    background-image: none;
-    background: #1B3755;
-  }*/
 
   .list-container {
     display: table;
@@ -1258,6 +1258,19 @@ a.btn {
   .walldecor {
     background: url(../images/common/index_nomikai_decor.png) center;
     background-size: contain;
+  }
+
+  .wrap-decor {
+    position: relative;
+    max-width: 1195px;
+    max-height: calc(100vh - 120px);
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+  }
+
+  .food-decor:nth-of-type(3) {
+    top: -88px;
   }
 }
 

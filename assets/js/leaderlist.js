@@ -1,3 +1,5 @@
+const groupList = [];
+
 const leaders = [
   "Khine Shwe Sin Aung",
   "Zin Mar Oo",
@@ -207,18 +209,33 @@ $(".group-container").append(`<div class="group-list"> <div class="gp-head">Mana
 var index = 0;
 for (var i = 0; i < leaders.length; i++) {
   var memberList = "";
+  var member = [];
   if (i < 5) {
     for (let j = 0; j < 10; j++) {
+      member.push(randomMembers[index]);
       memberList += `<li><span>${j+1}.</span><span>${randomMembers[index]}</span></li>`;
       index += 1;
     }
+    groupList.push({ "leader": leaders[i], "members": member, "meet_link": meetlinks[i] });
   } else {
     for (let j = 0; j < 9; j++) {
+      member.push(randomMembers[index]);
       memberList += `<li><span>${j+1}.</span><span>${randomMembers[index]}</span></li>`;
       index += 1;
     }
+    groupList.push({ "leader": leaders[i], "members": member, "meet_link": meetlinks[i] });
   }
   $(".group-container").append(`<div class="group-list"> <div class="gp-head">${leaders[i]}</div> 
       <ul class="gp-content"> ${memberList}
       </ul> <span class="meet-link">${meetlinks[i]}</span> </div>`)
 }
+
+console.log(groupList);
+
+$.ajax({
+  type: "POST",
+  url: "",
+  data: {
+    groupList: JSON.stringify(groupList)
+  }
+})

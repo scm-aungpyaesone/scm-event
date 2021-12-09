@@ -18,17 +18,17 @@
       <div id="loader">
         <div class="loading-anim">
           <div class="top-decor">
-            <img class="loading-decor" src="assets/images/svg/loading_asset01.svg">
-            <img class="loading-decor" src="assets/images/svg/loading_asset07.svg">
-            <img class="loading-decor" src="assets/images/svg/loading_asset02.svg">
-            <img class="loading-decor" src="assets/images/svg/loading_asset08.svg">
-            <img class="loading-decor" src="assets/images/svg/loading_asset03.svg">
-            <img class="loading-decor" src="assets/images/svg/loading_asset09.svg">
-            <img class="loading-decor" src="assets/images/svg/loading_asset04.svg">
-            <img class="loading-decor" src="assets/images/svg/loading_asset10.svg">
-            <img class="loading-decor" src="assets/images/svg/loading_asset05.svg">
-            <img class="loading-decor" src="assets/images/svg/loading_asset11.svg">
-            <img class="loading-decor" src="assets/images/svg/loading_asset06.svg">
+            <img class="loading-decor" src="assets/images/svg/loading_asset01.svg" alt="loading-decor-img">
+            <img class="loading-decor" src="assets/images/svg/loading_asset07.svg" alt="loading-decor-img">
+            <img class="loading-decor" src="assets/images/svg/loading_asset02.svg" alt="loading-decor-img">
+            <img class="loading-decor" src="assets/images/svg/loading_asset08.svg" alt="loading-decor-img">
+            <img class="loading-decor" src="assets/images/svg/loading_asset03.svg" alt="loading-decor-img">
+            <img class="loading-decor" src="assets/images/svg/loading_asset09.svg" alt="loading-decor-img">
+            <img class="loading-decor" src="assets/images/svg/loading_asset04.svg" alt="loading-decor-img">
+            <img class="loading-decor" src="assets/images/svg/loading_asset10.svg" alt="loading-decor-img">
+            <img class="loading-decor" src="assets/images/svg/loading_asset05.svg" alt="loading-decor-img">
+            <img class="loading-decor" src="assets/images/svg/loading_asset11.svg" alt="loading-decor-img">
+            <img class="loading-decor" src="assets/images/svg/loading_asset06.svg" alt="loading-decor-img">
           </div>
           <div class="loading-txt">
             <span>Finding your gift!</span>
@@ -49,15 +49,15 @@
             <div class="event-info">
               <h2 class="info-ttl">"Every gift from a friend is a wish for your happiness."</h2>
               <div class="btn-wrapper flex">
-                <button onclick="window.print()" class="btn print-btn">
+                <!--<button onclick="window.print()" class="btn print-btn">
                   PRINT
-                </button>
+                </button>-->
                 <a href="nomikai_index.html" class="btn nomi-btn">
                   To Dinner Page
                 </a>
               </div>
             </div>
-            <section id="event-results">
+            <div id="eventResults">
               <div class="results-wrapper">
                 <div class="results-container">
                   <div class="list-wrapper">
@@ -91,7 +91,7 @@
                   </div>
                 </div>
               </div>
-            </section>
+            </div>
           </div>
         </div>
       </div>
@@ -100,6 +100,7 @@
   <!--JS-->
   <script src="assets/js/jquery-3.6.0.min.js"></script>
   <script src="assets/js/gift-item.js"></script>
+  <script src="assets/js/data-list.js"></script>
   <script src="assets/js/gift.js"></script>
   <script src="assets/js/TweenMax.min.js"></script>
   <script src="assets/js/anime.min.js"></script>
@@ -107,9 +108,8 @@
   <script>
     $(document).ready(function () {
     var scrollTop     = $(window).scrollTop(),
-      elementOffset = $('.results-wrapper').offset().top,
-      distance = (elementOffset - scrollTop);
-    console.log("distance",distance);
+        elementOffset = $('.results-wrapper').offset().top,
+        distance = (elementOffset - scrollTop);
     
     $(window).scroll(function (e) {
       var $el = $('.results-wrapper');

@@ -17,6 +17,7 @@ var flakes = [],
   mX = -100,
   mY = -100;
 
+//wrapperHeight = $('.results-wrapper').offset().top + 45;
 snowAnim.width = window.innerWidth;
 snowAnim.height = window.innerHeight;
 
@@ -48,7 +49,7 @@ function snow() {
       if (flake.velY <= flake.speed) {
         flake.velY = flake.speed;
       }
-      flake.velX += Math.cos((flake.step += 0.05)) * flake.stepSize;
+      
     }
 
     snowctx.fillStyle = "rgba(255,255,255," + flake.opacity + ")";

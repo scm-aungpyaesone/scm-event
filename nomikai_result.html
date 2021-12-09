@@ -26,15 +26,15 @@
           </div>
         </div>
         <div class="wrap-decor">
-          <img class="food-decor" src="assets/images/svg/food_decor01.svg">
-          <img class="food-decor" src="assets/images/svg/food_decor02.svg">
-          <img class="food-decor" src="assets/images/svg/food_decor03.svg">
-          <img class="food-decor" src="assets/images/svg/food_decor04.svg">
-          <img class="food-decor" src="assets/images/svg/food_decor05.svg">
-          <img class="food-decor" src="assets/images/svg/food_decor06.svg">
-          <img class="food-decor" src="assets/images/svg/food_decor07.svg">
-          <img class="food-decor" src="assets/images/svg/food_decor08.svg">
-          <img class="food-decor" src="assets/images/svg/food_decor09.svg">
+          <img class="food-decor" src="assets/images/svg/food_decor01.svg" alt="food-decor-img">
+          <img class="food-decor" src="assets/images/svg/food_decor02.svg" alt="food-decor-img">
+          <img class="food-decor" src="assets/images/svg/food_decor03.svg" alt="food-decor-img">
+          <img class="food-decor" src="assets/images/svg/food_decor04.svg" alt="food-decor-img">
+          <img class="food-decor" src="assets/images/svg/food_decor05.svg" alt="food-decor-img">
+          <img class="food-decor" src="assets/images/svg/food_decor06.svg" alt="food-decor-img">
+          <img class="food-decor" src="assets/images/svg/food_decor07.svg" alt="food-decor-img">
+          <img class="food-decor" src="assets/images/svg/food_decor08.svg" alt="food-decor-img">
+          <img class="food-decor" src="assets/images/svg/food_decor09.svg" alt="food-decor-img">
         </div>
         <div class="jumping-dots-loader"> <span></span> <span></span> <span></span> </div>
       </div>
@@ -43,11 +43,6 @@
           <div class="content">
             <div class="group-wrapper">
               <div class="group-container">
-              </div>
-              <div class="btn-wrapper flex">
-                <button onclick="window.print()" class="btn print-btn">
-                  PRINT
-                </button>
               </div>
             </div>
           </div>
@@ -129,6 +124,9 @@
       setInterval(() => {
         $("#loader, #layout").addClass('loaded');
       }, 8400);
+      setInterval(() => {
+        $(".group-wrapper").addClass('loaded');
+      }, 11000);
     });
   </script>
 </body>
