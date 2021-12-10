@@ -18,6 +18,7 @@ const leaders = [
   "Jimmy"
 ];
 const members = [
+  "Zune Thi Cho",
   "Thura Naing",
   "Hnin Wai Wai Aung",
   "Aung Linn Naing",
@@ -210,7 +211,7 @@ var index = 0;
 for (var i = 0; i < leaders.length; i++) {
   var memberList = "";
   var member = [];
-  if (i < 5) {
+  if (i < 6) {
     for (let j = 0; j < 10; j++) {
       member.push(randomMembers[index]);
       memberList += `<li><span>${j+1}.</span><span>${randomMembers[index]}</span></li>`;

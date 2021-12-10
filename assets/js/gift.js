@@ -16,17 +16,14 @@ for (var i = 0; i < specialGiver.length; i++) {
 
 var specialWinner = [],
 index = 0,
-gender = Math.floor(Math.random() * 2);
+gender = 0;
 var spWinnerList = "";
+var specialGift = [];
 
 for (let i = 0; i < 3; i++) {
 
   if (specialWinner.length == 1) {
-    if (gender == 1) {
-      gender = 0;
-    } else {
-      gender = 1;
-    }
+    gender = 1;
   } else if (specialWinner.length >= 2) {
     gender = Math.floor(Math.random() * 2);
   }
@@ -38,12 +35,18 @@ for (let i = 0; i < 3; i++) {
 
   console.log("Special prize winner", winner[index].staff_id, winner[index].name);
 
+  if (specialWinner.length <= 2) {
+    specialGift = specialGiver.find(j =>  j.is_for == gender );
+  } else {
+    specialGift = specialGiver.find(j => j.is_for === 'mix');
+  }
+
   spWinnerList += `<div class="listo"> <div class="list-box"> <div class="num-detail li-inner">
   ${ i + 1 } </div> <div class="receiver-detail li-inner"> <img class="receiver-img" src="assets/images/members/${specialWinner[i].profile_img}"> <div class="receiver-name">
   ${specialWinner[i].name} </div></div> <div class="gift-detail li-inner"> <div class="gift-name">
-  ${specialGiver[i].staff_id} </div> <img class="gift-img" src="assets/images/gifts/${specialWinner[i].gift_img}"> </div> </div> </div>`;
+  ${specialGift.staff_id} </div> <img class="gift-img" src="assets/images/gifts/${specialWinner[i].gift_img}"> </div> </div> </div>`;
 
-  giftList.push({ "name": specialWinner[i].name, "gift": specialGiver[i].staff_id, "profile_img" : specialWinner[i].profile_img, "gift_img": specialGiver[i].gift_img});
+  giftList.push({ "name": specialWinner[i].name, "gift": specialGift.staff_id, "profile_img" : specialWinner[i].profile_img, "gift_img": specialGift.gift_img});
 }
 $('.list-container').append(spWinnerList);
 

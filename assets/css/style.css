@@ -672,6 +672,7 @@ a.btn {
 .list-container {
   max-height: calc(65vh - 90px);
   /*padding-bottom: 20px;*/
+  overflow-x: hidden;
   overflow-y: scroll;
   display: flex;
   flex-wrap: wrap;
@@ -758,6 +759,7 @@ a.btn {
   display: flex;
   display: -webkit-flex;
   align-items: center;
+  position: relative;
 }
 
 .gift-detail {
@@ -765,18 +767,45 @@ a.btn {
   justify-content: space-between;
   padding-right: 0px;
 }
+
 .receiver-detail .receiver-img {
   width: 36px;
   height: 36px;
   border-radius: 50%;
   margin-right: 10px;
   object-fit: cover;
+  z-index: 1;
+}
+
+.listo:nth-of-type(-n+4) .receiver-detail::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: -10px;
+  width: 73px;
+  height: 57px;
+  transform: scale(0.8);
+  background-image: url(../images/svg/special_decor_profile.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 .gift-detail .gift-img {
   width: 65px;
   height: 65px;
   border-radius: 5px;
+}
+
+.listo:nth-of-type(-n+4) .gift-detail::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: 101px;
+  width: 109px;
+  height: 100px;
+  background-image: url(../images/svg/special_decor_gift.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 .divider {
@@ -1060,7 +1089,8 @@ a.btn {
   background: url(../images/common/result_nomikai_bgd.jpg) no-repeat center center;
   background-size: cover;
   background-position-y: top;
-  max-height: 1615px;
+  /*max-height: 1615px;*/
+  min-height: 1946px;
   overflow-y: hidden;
 }
 

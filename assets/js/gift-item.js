@@ -371,7 +371,8 @@ const gifts = [
      "gift_img": "sample_gift_01.jpg",
      "is_excluded": 1,
      "gender": 0,
-     "is_special": 1
+     "is_special": 1,
+     "is_for": 0
   },
   {
       "name": "Kyi Myat Noe Soe",
@@ -833,7 +834,8 @@ const gifts = [
       "gift_img": "sample_gift_01.jpg",
       "is_excluded": 1,
       "gender": 1,
-      "is_special": 1
+      "is_special": 1,
+      "is_for": "mix"
   },
   {
       "name": "Thin Thin Moe",
@@ -1047,7 +1049,8 @@ const gifts = [
       "gift_img": "sample_gift_01.jpg",
       "is_excluded": 1,
       "gender": 1,
-      "is_special": 1
+      "is_special": 1,
+      "is_for": 1
   },
   {
       "name": "Zin Nwe Oo",
