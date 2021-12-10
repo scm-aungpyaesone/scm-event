@@ -48,7 +48,6 @@ function snow() {
       if (flake.velY <= flake.speed) {
         flake.velY = flake.speed;
       }
-      
     }
 
     snowctx.fillStyle = "rgba(255,255,255," + flake.opacity + ")";
@@ -97,7 +96,7 @@ function init() {
       size: size,
       stepSize: Math.random() / 30,
       step: 0,
-      opacity: opacity
+      opacity: opacity,
     });
   }
 
@@ -116,28 +115,26 @@ window.addEventListener("resize", function () {
 init();
 
 var giftbox = anime({
-  targets: '.gift-wrapper',
+  targets: ".gift-wrapper",
   translateX: [
-    { value: '-25%' },
-    { value: '20%'  },
-    { value: '-15%' },
-    { value: '10%'  },
-    { value: '-5%'  },
-    { value: '0%'   },
+    { value: "-25%" },
+    { value: "20%" },
+    { value: "-15%" },
+    { value: "10%" },
+    { value: "-5%" },
+    { value: "0%" },
   ],
   rotate: [
-    { value: '-5deg' },
-    { value: '3deg'  },
-    { value: '-3deg' },
-    { value: '2deg'  },
-    { value: '-1deg'  },
-    { value: '0deg'   },
+    { value: "-5deg" },
+    { value: "3deg" },
+    { value: "-3deg" },
+    { value: "2deg" },
+    { value: "-1deg" },
+    { value: "0deg" },
   ],
   scale: [0.6, 0.6],
   duration: 800,
   delay: 4000,
-  easing: 'easeInElastic',
+  easing: "easeInElastic",
   loop: true,
-})
-
-
+});

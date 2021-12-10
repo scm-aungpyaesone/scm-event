@@ -15,7 +15,7 @@ const leaders = [
   "Htay Hlaing",
   "Pwint Phyu Oo",
   "Khin Marlar Myo",
-  "Jimmy"
+  "Jimmy",
 ];
 const members = [
   "Zune Thi Cho",
@@ -158,35 +158,35 @@ const members = [
   "Khwar Nyo Thin",
   "Khin Aye Aye Nyein",
   "May Thinzar",
-  "Aye Myat Myat Khine"
-]
+  "Aye Myat Myat Khine",
+];
 
 const meetlinks = [
-  'https://meet.google.com/aaa-aaa-bbb',
-  'https://meet.google.com/aaa-aaa-bbb', 
-  'https://meet.google.com/aaa-aaa-bbb', 
-  'https://meet.google.com/aaa-aaa-bbb', 
-  'https://meet.google.com/aaa-aaa-bbb', 
-  'https://meet.google.com/aaa-aaa-bbb', 
-  'https://meet.google.com/aaa-aaa-bbb', 
-  'https://meet.google.com/aaa-aaa-bbb', 
-  'https://meet.google.com/aaa-aaa-bbb', 
-  'https://meet.google.com/aaa-aaa-bbb', 
-  'https://meet.google.com/aaa-aaa-bbb', 
-  'https://meet.google.com/aaa-aaa-bbb', 
-  'https://meet.google.com/aaa-aaa-bbb', 
-  'https://meet.google.com/aaa-aaa-bbb', 
-  'https://meet.google.com/aaa-aaa-bbb'
+  "https://meet.google.com/aaa-aaa-bbb",
+  "https://meet.google.com/aaa-aaa-bbb",
+  "https://meet.google.com/aaa-aaa-bbb",
+  "https://meet.google.com/aaa-aaa-bbb",
+  "https://meet.google.com/aaa-aaa-bbb",
+  "https://meet.google.com/aaa-aaa-bbb",
+  "https://meet.google.com/aaa-aaa-bbb",
+  "https://meet.google.com/aaa-aaa-bbb",
+  "https://meet.google.com/aaa-aaa-bbb",
+  "https://meet.google.com/aaa-aaa-bbb",
+  "https://meet.google.com/aaa-aaa-bbb",
+  "https://meet.google.com/aaa-aaa-bbb",
+  "https://meet.google.com/aaa-aaa-bbb",
+  "https://meet.google.com/aaa-aaa-bbb",
+  "https://meet.google.com/aaa-aaa-bbb",
 ];
 
 var randomMembers = [],
-    i = members.length,
-    j = 0;
+  i = members.length,
+  j = 0;
 
 while (i--) {
-    j = Math.floor(Math.random() * (i+1));
-    randomMembers.push(members[j]);
-    members.splice(j,1);
+  j = Math.floor(Math.random() * (i + 1));
+  randomMembers.push(members[j]);
+  members.splice(j, 1);
 }
 
 var managers = [
@@ -197,15 +197,16 @@ var managers = [
   "Su Yee Win",
   "Shwe Yi Pyae Soan",
   "Myat Mon Thein",
-  "Zin May Thu"
-]
+  "Zin May Thu",
+];
 var managerList = "";
 for (let i = 0; i < managers.length; i++) {
-  managerList += `<li><span>${i+1}.</span><span>${managers[i]}</span></li>`;
+  managerList += `<li><span>${i + 1}.</span><span>${managers[i]}</span></li>`;
 }
-$(".group-container").append(`<div class="group-list"> <div class="gp-head">Manager Group</div> 
+$(".group-container")
+  .append(`<div class="group-list"> <div class="gp-head">Manager Group</div> 
       <ul class="gp-content"> ${managerList}
-      </ul> <span class="meet-link">https://meet.google.com/aaa-aaa-bbb</span> </div>`)
+      </ul> <span class="meet-link">https://meet.google.com/aaa-aaa-bbb</span> </div>`);
 
 var index = 0;
 for (var i = 0; i < leaders.length; i++) {
@@ -214,27 +215,40 @@ for (var i = 0; i < leaders.length; i++) {
   if (i < 6) {
     for (let j = 0; j < 10; j++) {
       member.push(randomMembers[index]);
-      memberList += `<li><span>${j+1}.</span><span>${randomMembers[index]}</span></li>`;
+      memberList += `<li><span>${j + 1}.</span><span>${
+        randomMembers[index]
+      }</span></li>`;
       index += 1;
     }
-    groupList.push({ "leader": leaders[i], "members": member, "meet_link": meetlinks[i] });
+    groupList.push({
+      leader: leaders[i],
+      members: member,
+      meet_link: meetlinks[i],
+    });
   } else {
     for (let j = 0; j < 9; j++) {
       member.push(randomMembers[index]);
-      memberList += `<li><span>${j+1}.</span><span>${randomMembers[index]}</span></li>`;
+      memberList += `<li><span>${j + 1}.</span><span>${
+        randomMembers[index]
+      }</span></li>`;
       index += 1;
     }
-    groupList.push({ "leader": leaders[i], "members": member, "meet_link": meetlinks[i] });
+    groupList.push({
+      leader: leaders[i],
+      members: member,
+      meet_link: meetlinks[i],
+    });
   }
-  $(".group-container").append(`<div class="group-list"> <div class="gp-head">${leaders[i]}</div> 
+  $(".group-container")
+    .append(`<div class="group-list"> <div class="gp-head">${leaders[i]}</div> 
       <ul class="gp-content"> ${memberList}
-      </ul> <span class="meet-link">${meetlinks[i]}</span> </div>`)
+      </ul> <span class="meet-link">${meetlinks[i]}</span> </div>`);
 }
 
 $.ajax({
   type: "POST",
   url: "",
   data: {
-    groupList: JSON.stringify(groupList)
-  }
-})
+    groupList: JSON.stringify(groupList),
+  },
+});
