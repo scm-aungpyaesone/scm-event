@@ -1,3 +1,5 @@
+const groupList = [];
+
 var randomMembers = [],
   i = members.length,
   j = 0;
@@ -8,16 +10,6 @@ while (i--) {
   members.splice(j, 1);
 }
 
-var managers = [
-  "Kyaw Soe Naing",
-  "Thin Muyar Win",
-  "Kyaw Htin Soe",
-  "Yan Myo Aung",
-  "Su Yee Win",
-  "Shwe Yi Pyae Soan",
-  "Myat Mon Thein",
-  "Zin May Thu",
-];
 var managerList = "";
 for (let i = 0; i < managers.length; i++) {
   managerList += `<li><span>${i + 1}.</span><span>${managers[i]}</span></li>`;
@@ -25,14 +17,14 @@ for (let i = 0; i < managers.length; i++) {
 $(".group-container")
   .append(`<div class="group-list"> <div class="gp-head">Manager Group</div> 
       <ul class="gp-content"> ${managerList}
-      </ul> <span class="meet-link">https://meet.google.com/aaa-aaa-bbb</span> </div>`);
+      </ul> <span class="meet-link">${meetlinks[0]}</span> </div>`);
 
 var index = 0;
 for (var i = 0; i < leaders.length; i++) {
   var memberList = "";
   var member = [];
-  if (i < 6) {
-    for (let j = 0; j < 10; j++) {
+  if (i < total_group_for_tenmembers) {
+    for (let j = 0; j < max_member; j++) {
       member.push(randomMembers[index]);
       memberList += `<li><span>${j + 1}.</span><span>${
         randomMembers[index]
@@ -45,7 +37,7 @@ for (var i = 0; i < leaders.length; i++) {
       meet_link: meetlinks[i],
     });
   } else {
-    for (let j = 0; j < 9; j++) {
+    for (let j = 0; j < min_member; j++) {
       member.push(randomMembers[index]);
       memberList += `<li><span>${j + 1}.</span><span>${
         randomMembers[index]
@@ -61,7 +53,7 @@ for (var i = 0; i < leaders.length; i++) {
   $(".group-container")
     .append(`<div class="group-list"> <div class="gp-head">${leaders[i]}</div> 
       <ul class="gp-content"> ${memberList}
-      </ul> <span class="meet-link">${meetlinks[i]}</span> </div>`);
+      </ul> <span class="meet-link">${meetlinks[i+1]}</span> </div>`);
 }
 
 $.ajax({

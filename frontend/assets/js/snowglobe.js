@@ -16,8 +16,7 @@ img.onload = function () {
   snowflake.height = town.offsetWidth;
   initSnow();
 };
-img.crossOrigin = "Anonymous";
-img.src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/127738/town.svg?v2";
+img.src = "./assets/images/svg/town.svg";
 
 var globeFlakes;
 

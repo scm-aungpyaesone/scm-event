@@ -1,3 +1,5 @@
+const giftList = [];
+
 var arr1 = gifts.slice(),
   arr2 = gifts.slice();
 
