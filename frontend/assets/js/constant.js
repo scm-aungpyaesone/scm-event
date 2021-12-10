@@ -1,10 +1,14 @@
+
+// for server
+const API_URL = "https://scmevent.scm-stg.com/backend/api";
+
+// for development
+// const API_URL = "http://localhost:8000/api";
+
 // gender: 0 for male, 1 for female
 // is_excluded is restriction for members who will not receive special gift
 // is_special for members who gives special gift
 // is_for -> determining special gift type, 0 for male; 1 for female
-
-const API_URL = "http://localhost:8000/api";
-
 const gifts = [
   {
     name: "Akary Thein",
