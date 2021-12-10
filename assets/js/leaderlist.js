@@ -231,8 +231,6 @@ for (var i = 0; i < leaders.length; i++) {
       </ul> <span class="meet-link">${meetlinks[i]}</span> </div>`)
 }
 
-console.log(groupList);
-
 $.ajax({
   type: "POST",
   url: "",

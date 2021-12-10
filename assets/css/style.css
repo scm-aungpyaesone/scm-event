@@ -361,10 +361,6 @@ input#click {
 
 /* RESULT PAGE START
 --------------------------------------------------*/
-/*#resultPage #layout.loaded {
-  overflow-y: visible;
-}*/
-
 #resultPage .main,
 #resultPage .header 
 {
@@ -640,7 +636,6 @@ a.btn {
   height: auto;
   background-color: #FFFFFF;
   border: 2px solid #1164AE;
-  /*border-radius: 20px 20px 0 0;*/
   border-radius: 20px;
 }
 
@@ -677,7 +672,6 @@ a.btn {
 
 .list-container {
   max-height: calc(65vh - 90px);
-  /*padding-bottom: 20px;*/
   overflow-x: hidden;
   overflow-y: scroll;
   display: flex;
@@ -790,8 +784,6 @@ a.btn {
 .listo.special .num-detail::before {
   content: '';
   position: absolute;
-  /*top: -30px;
-  left: -10px;*/
   top: -33px;
   right: -60px;
   width: 73px;
@@ -1033,6 +1025,7 @@ a.btn {
   opacity: 1;
   transform: scale(1);
 }
+
 /* NOMIKAI RESULT START
 --------------------------------------------------*/
 #nomikaiResult #layout.loaded {
@@ -1124,7 +1117,6 @@ a.btn {
   background: url(../images/common/result_nomikai_bgd.jpg) no-repeat center center;
   background-size: cover;
   background-position-y: top;
-  /*max-height: 1615px;*/
   min-height: 1946px;
   overflow-y: hidden;
 }

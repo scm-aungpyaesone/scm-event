@@ -10,7 +10,6 @@ arr2.sort(function() { return 0.5 - Math.random();});
 var specialGiver = arr2.filter(h => h.is_special);
 
 for (var i = 0; i < specialGiver.length; i++) {
-  console.log(specialGiver[i].staff_id);
   arr2.splice(arr2.findIndex(a => a.staff_id === specialGiver[i].staff_id), 1);
 }
 
@@ -32,8 +31,6 @@ for (let i = 0; i < 3; i++) {
   index = Math.floor(Math.random() * winner.length);
   specialWinner.push(winner[index]);
   arr1.splice(arr1.findIndex(a => a.staff_id === winner[index].staff_id), 1);
-
-  console.log("Special prize winner", winner[index].staff_id, winner[index].name);
 
   if (specialWinner.length <= 2) {
     specialGift = specialGiver.find(j =>  j.is_for == gender );
@@ -64,8 +61,6 @@ while (arr1.length) {
 
   arr1.shift();
 
-  console.log(receiver.name + " (" + receiver.staff_id + ")" + " gets " + gift.staff_id + " (" + gift.name + ")");
-
   listnum++;
 
   $(".list-container").append(`<div class="listo"> <div class="list-box"> <div class="num-detail li-inner"> ` + 
@@ -75,9 +70,6 @@ while (arr1.length) {
 
   giftList.push({ "name": receiver.name, "gift": gift.staff_id, "profile_img" : receiver.profile_img, "gift_img": gift.gift_img});
 }
-
-
-console.log(giftList);
 
 $.ajax({
   type: "POST",

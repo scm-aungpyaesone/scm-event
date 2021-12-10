@@ -49,9 +49,6 @@
             <div class="event-info">
               <h2 class="info-ttl">"Every gift from a friend is a wish for your happiness."</h2>
               <div class="btn-wrapper flex">
-                <!--<button onclick="window.print()" class="btn print-btn">
-                  PRINT
-                </button>-->
                 <a href="nomikai_index.html" class="btn nomi-btn">
                   To Dinner Page
                 </a>
@@ -128,7 +125,7 @@
       targets: '.loading-decor',
       duration: 1600,
       translateY: {
-        value: [0, 270], //[-280,0]
+        value: [0, 270],
         delay: anime.stagger(100),
       },
       easing: 'easeInOutCubic',
@@ -137,7 +134,7 @@
       targets: '.loading-decor',
       duration: 1600,
       translateY: {
-        value: [270, 0], //[0, -280]
+        value: [270, 0],
         delay: anime.stagger(100, {from:'last'}),
       },
       easing: 'easeInOutCubic',

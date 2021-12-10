@@ -17,7 +17,6 @@ var flakes = [],
   mX = -100,
   mY = -100;
 
-//wrapperHeight = $('.results-wrapper').offset().top + 45;
 snowAnim.width = window.innerWidth;
 snowAnim.height = window.innerHeight;
 
