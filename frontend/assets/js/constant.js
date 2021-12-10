@@ -1270,5 +1270,17 @@ const meetlinks = [
   "https://meet.google.com/aaa-aaa-bbb",
 ];
 
-const giftList = [];
-const groupList = [];
+var managers = [
+  "Kyaw Soe Naing",
+  "Thin Muyar Win",
+  "Kyaw Htin Soe",
+  "Yan Myo Aung",
+  "Su Yee Win",
+  "Shwe Yi Pyae Soan",
+  "Myat Mon Thein",
+  "Zin May Thu",
+];
+
+const total_group_for_tenmembers = 6;
+const max_member = 10;
+const min_member = 9;
