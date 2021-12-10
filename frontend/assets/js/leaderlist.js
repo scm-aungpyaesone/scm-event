@@ -245,9 +245,10 @@ for (var i = 0; i < leaders.length; i++) {
       </ul> <span class="meet-link">${meetlinks[i]}</span> </div>`);
 }
 
+const API_URL = "http://localhost:8000/api";
 $.ajax({
   type: "POST",
-  url: "http://localhost:8000/api/save-nomikai",
+  url: API_URL + "/save-nomikai",
   data: {
     "username": localStorage.getItem("username"),
     "groupList": JSON.stringify(groupList)
