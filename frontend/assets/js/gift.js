@@ -100,7 +100,6 @@ while (arr1.length) {
   });
 }
 
-const API_URL = "http://localhost:8000/api";
 $.ajax({
   type: "POST",
   url: API_URL + "/save-gifts",

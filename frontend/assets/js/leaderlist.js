@@ -64,7 +64,6 @@ for (var i = 0; i < leaders.length; i++) {
       </ul> <span class="meet-link">${meetlinks[i]}</span> </div>`);
 }
 
-const API_URL = "http://localhost:8000/api";
 $.ajax({
   type: "POST",
   url: API_URL + "/save-nomikai",
