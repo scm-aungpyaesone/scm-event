@@ -68,6 +68,11 @@
       $(".christmas-light")
       .append('<li></li>')
     }
+
+    var username = prompt("Please enter your name");
+    if (username != null) {
+      localStorage.setItem("username", username);
+    }
   </script>
 </body>
 </html>

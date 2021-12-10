@@ -66,8 +66,12 @@ for (var i = 0; i < leaders.length; i++) {
 
 $.ajax({
   type: "POST",
-  url: "",
+  url: "http://localhost:8000/api/save-nomikai",
   data: {
-    groupList: JSON.stringify(groupList),
+    "username": localStorage.getItem("username"),
+    "groupList": JSON.stringify(groupList)
   },
-});
+  success: function(data){
+    console.log(data);
+  }
+})

@@ -102,8 +102,12 @@ while (arr1.length) {
 
 $.ajax({
   type: "POST",
-  url: "",
+  url: "http://localhost:8000/api/save-gifts",
   data: {
-    giftList: JSON.stringify(giftList),
+    "username": localStorage.getItem("username"),
+    "giftList": JSON.stringify(giftList)
   },
-});
+  success: function(data){
+    console.log(data);
+  }
+})
