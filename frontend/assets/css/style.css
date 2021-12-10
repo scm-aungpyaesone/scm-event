@@ -1,11 +1,6 @@
 @charset "utf-8";
 
 @font-face {
-  font-family: "ChristmasBless";
-  src: url(../fonts/ChristmasBless.ttf);
-}
-
-@font-face {
   font-family: "HeyOctober";
   src: url(../fonts/HeyOctober.ttf);
 }
@@ -22,13 +17,6 @@
   font-weight: 700;
   font-style: normal;
   src: url(../fonts/Lato-Bold.ttf);
-}
-
-@font-face {
-  font-family: 'FuturaPTM';
-  font-weight: 700;
-  font-style: normal;
-  src: url(../fonts/FuturaPTMedium.otf);
 }
 
 @font-face {
@@ -119,17 +107,6 @@ body {
   height: 190px;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.globe-txt {
-  position: absolute;
-  bottom: 40px;
-  display: block;
-  width: 100%;
-  font-family: "ChristmasBless";
-  font-size: 24px;
-  color: #1B3755;
-  text-align: center;
 }
 
 #gift {
