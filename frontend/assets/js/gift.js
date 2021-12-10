@@ -104,7 +104,7 @@ while (arr1.length) {
 
 $.ajax({
   type: "POST",
-  url: "http://localhost:8000/api/save-gifts",
+  url: API_URL + "/save-gifts",
   data: {
     "username": localStorage.getItem("username"),
     "giftList": JSON.stringify(giftList)

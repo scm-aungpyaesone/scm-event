@@ -97,7 +97,7 @@ class ResultController extends Controller
         ]);
 
         $mpdf->WriteHTML($pdf_data);
-        $file_path_1 = "results_".Carbon::now()->format("Y_m_d");
+        $file_path_1 = "storage/results_".Carbon::now()->format("Y_m_d");
         if (!file_exists($file_path_1)) {
             File::makeDirectory($file_path_1);
         }
@@ -217,7 +217,7 @@ class ResultController extends Controller
         ]);
 
         $mpdf->WriteHTML($pdf_data);
-        $file_path_1 = "results_".Carbon::now()->format("Y_m_d");
+        $file_path_1 = "storage/results_".Carbon::now()->format("Y_m_d");
         if (!file_exists($file_path_1)) {
             File::makeDirectory($file_path_1);
         }
@@ -238,9 +238,9 @@ class ResultController extends Controller
     }
 
     public function saveZip(Request $request) {
-        $file_path = "results_".Carbon::now()->format("Y_m_d");
+        $file_path = "storage/results_".Carbon::now()->format("Y_m_d");
         $zip = new ZipArchive;
-        $zip_file_name = "results_".Carbon::now()->format("Y_m_d_H_i").".zip";
+        $zip_file_name = "storage/results_".Carbon::now()->format("Y_m_d_H_i").".zip";
    
         if ($zip->open(public_path($zip_file_name), ZipArchive::CREATE) === TRUE)
         {
@@ -250,7 +250,7 @@ class ResultController extends Controller
              
             $zip->close();
         }
-        return response()->download(public_path($zip_file_name));
+        return response()->download(public_path($zip_file_name))->deleteFileAfterSend();
     }
 
     private function addContent(ZipArchive $zip, string $path)

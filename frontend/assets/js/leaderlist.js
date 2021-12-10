@@ -58,7 +58,7 @@ for (var i = 0; i < leaders.length; i++) {
 
 $.ajax({
   type: "POST",
-  url: "http://localhost:8000/api/save-nomikai",
+  url: API_URL + "/save-nomikai",
   data: {
     "username": localStorage.getItem("username"),
     "groupList": JSON.stringify(groupList)

@@ -3,6 +3,8 @@
 // is_special for members who gives special gift
 // is_for -> determining special gift type, 0 for male; 1 for female
 
+const API_URL = "http://localhost:8000/api";
+
 const gifts = [
   {
     name: "Akary Thein",
