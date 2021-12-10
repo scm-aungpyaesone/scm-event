@@ -73,7 +73,7 @@ function render(a) {
 function shakeGlobe() {
   window.removeEventListener("click", shakeGlobe);
   window.removeEventListener("touchstart", shakeGlobe);
-  $("#globe, .globe-txt").on("click", function () {
+  $(".globe-wrapper, .globe-txt").on("click", function () {
     var globe = document.getElementById("globe");
     TweenMax.to(snowflake, 0.5, {
       opacity: 0

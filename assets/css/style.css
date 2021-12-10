@@ -466,14 +466,20 @@ input#click {
   animation: bounce 1s ease-in-out 0.66s infinite
 }
 
-#resultPage #snowAnim.loading {
+#resultPage #snowAnim.loading,
+#nomikaiIndex #snowAnim.loading 
+{
   z-index: 101;
+}
+
+#resultPage .top-decor {
+  top: -270px;
 }
 
 .top-decor {
   position: absolute;
   width: 100%;
-  top: 0;
+  top: -245px;
   padding: 0 60px;
   display: flex;
   justify-content: space-around;
@@ -777,11 +783,17 @@ a.btn {
   z-index: 1;
 }
 
-.listo:nth-of-type(-n+4) .receiver-detail::before {
+.list-container .num-detail  {
+  position: relative;
+}
+
+.listo.special .num-detail::before {
   content: '';
   position: absolute;
-  top: -30px;
-  left: -10px;
+  /*top: -30px;
+  left: -10px;*/
+  top: -33px;
+  right: -60px;
   width: 73px;
   height: 57px;
   transform: scale(0.8);
@@ -796,7 +808,7 @@ a.btn {
   border-radius: 5px;
 }
 
-.listo:nth-of-type(-n+4) .gift-detail::before {
+.listo.special .gift-detail::before {
   content: '';
   position: absolute;
   top: -30px;
@@ -806,6 +818,22 @@ a.btn {
   background-image: url(../images/svg/special_decor_gift.svg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
+}
+
+.listo.special .gift-name {
+  position: relative;
+}
+
+.listo.special .gift-name span {
+  font-size: 11px;
+  position: absolute;
+  top: 20px;
+  left: -14px;
+  display: block;
+  opacity: 0.6;
+  width: 80px;
+  text-align: center;
+  color: #046241;
 }
 
 .divider {
@@ -913,6 +941,13 @@ a.btn {
 
 /* NOMIKAI PAGE START
 --------------------------------------------------*/
+#nomikaiIndex #layout .artboard {
+  opacity: 0;
+  transition: opacity .8s ease;
+}
+#nomikaiIndex #layout.loaded .artboard {
+  opacity: 1;
+}
 .walldecor {
   position: absolute;
   top: -61px;

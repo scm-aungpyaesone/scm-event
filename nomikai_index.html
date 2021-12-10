@@ -9,10 +9,33 @@
   <link rel="icon" href="assets/images/svg/ico_xmas.svg"/>
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="stylesheet" href="assets/css/anim.css"/>
 </head>
 <body>
   <div id="nomikaiIndex">
     <div id="layout">
+      <div id="loader">
+        <canvas id="snowAnim" class="loading"></canvas>
+        <div class="loading-anim">
+          <div class="top-decor">
+            <img class="loading-decor" src="assets/images/svg/dinner_decor01.svg" alt="loading-decor-img">
+            <img class="loading-decor" src="assets/images/svg/dinner_decor02.svg" alt="loading-decor-img">
+            <img class="loading-decor" src="assets/images/svg/dinner_decor03.svg" alt="loading-decor-img">
+            <img class="loading-decor" src="assets/images/svg/dinner_decor04.svg" alt="loading-decor-img">
+            <img class="loading-decor" src="assets/images/svg/dinner_decor05.svg" alt="loading-decor-img">
+            <img class="loading-decor" src="assets/images/svg/dinner_decor06.svg" alt="loading-decor-img">
+            <img class="loading-decor" src="assets/images/svg/dinner_decor07.svg" alt="loading-decor-img">
+            <img class="loading-decor" src="assets/images/svg/dinner_decor08.svg" alt="loading-decor-img">
+            <img class="loading-decor" src="assets/images/svg/dinner_decor09.svg" alt="loading-decor-img">
+            <img class="loading-decor" src="assets/images/svg/dinner_decor10.svg" alt="loading-decor-img">
+            <img class="loading-decor" src="assets/images/svg/dinner_decor11.svg" alt="loading-decor-img">
+          </div>
+          <div class="loading-txt">
+            <span>"Dinner is better when we eat together"</span>
+          </div>
+          <div class="jumping-dots-loader"> <span></span> <span></span> <span></span> </div>
+        </div>
+      </div>
       <div class="artboard">
         <div class="walldecor">
           <img class="walldecor01" src="assets/images/svg/nomikai_decor01.svg">
@@ -39,5 +62,51 @@
   </div>
   <!--JS-->
   <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/TweenMax.min.js"></script>
+  <script src="assets/js/anime.min.js"></script>
+  <script src="assets/js/anim.js"></script>
+  <script>
+  var LoadingAnim = anime.timeline();
+
+  LoadingAnim
+  .add({
+    targets: '.loading-decor',
+    duration: 1600,
+    translateY: {
+      value: [0, 245],
+      delay: anime.stagger(100),
+    },
+    easing: 'easeInOutCubic',
+  })
+  .add({
+    targets: '.loading-decor',
+    duration: 1600,
+    translateY: {
+      value: [245, 0],
+      delay: anime.stagger(100, {from:'last'}),
+    },
+    easing: 'easeInOutCubic',
+  }, 4400)
+  .add({
+    targets: '#loader',
+    delay: 6000,
+    duration: 800,
+    opacity: [1,0],
+    easing: 'easeInOutCubic'
+  }, 0)
+  .add({
+    targets: '.list-box',
+    translateY: [400,0],
+    opacity: [0,1],
+    duration: 1200,
+    easing: 'easeInOutCubic'
+  })
+
+  $(window).ready(function () {
+      setInterval(() => {
+        $("#loader, #layout").addClass('loaded');
+      }, 6400);
+  });
+  </script>
 </body>
 </html>

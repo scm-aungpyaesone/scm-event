@@ -41,10 +41,10 @@ for (let i = 0; i < 3; i++) {
     specialGift = specialGiver.find(j => j.is_for === 'mix');
   }
 
-  spWinnerList += `<div class="listo"> <div class="list-box"> <div class="num-detail li-inner">
+  spWinnerList += `<div class="listo special"> <div class="list-box"> <div class="num-detail li-inner">
   ${ i + 1 } </div> <div class="receiver-detail li-inner"> <img class="receiver-img" src="assets/images/members/${specialWinner[i].profile_img}"> <div class="receiver-name">
   ${specialWinner[i].name} </div></div> <div class="gift-detail li-inner"> <div class="gift-name">
-  ${specialGift.staff_id} </div> <img class="gift-img" src="assets/images/gifts/${specialWinner[i].gift_img}"> </div> </div> </div>`;
+  ${specialGift.staff_id} <span>(Special Gift)</span> </div> <img class="gift-img" src="assets/images/gifts/${specialWinner[i].gift_img}"> </div> </div> </div>`;
 
   giftList.push({ "name": specialWinner[i].name, "gift": specialGift.staff_id, "profile_img" : specialWinner[i].profile_img, "gift_img": specialGift.gift_img});
 }
