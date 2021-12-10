@@ -239,18 +239,23 @@ class ResultController extends Controller
 
     public function saveZip(Request $request) {
         $file_path = "storage/results_".Carbon::now()->format("Y_m_d");
-        $zip = new ZipArchive;
-        $zip_file_name = "storage/results_".Carbon::now()->format("Y_m_d_H_i").".zip";
    
-        if ($zip->open(public_path($zip_file_name), ZipArchive::CREATE) === TRUE)
-        {
-            $files = File::files(public_path($file_path));
-   
-            $this->addContent($zip, realpath($file_path));
-             
-            $zip->close();
+        if (file_exists($file_path)) {
+            $zip = new ZipArchive;
+            $zip_file_name = "storage/results_".Carbon::now()->format("Y_m_d_H_i").".zip";
+            if ($zip->open(public_path($zip_file_name), ZipArchive::CREATE) === TRUE)
+            {
+                $files = File::files(public_path($file_path));
+       
+                $this->addContent($zip, realpath($file_path));
+                 
+                $zip->close();
+            }
+            return response()->download(public_path($zip_file_name))->deleteFileAfterSend();
         }
-        return response()->download(public_path($zip_file_name))->deleteFileAfterSend();
+        return response()->json([
+            "message" => "Folder not exist"
+        ]);
     }
 
     private function addContent(ZipArchive $zip, string $path)
