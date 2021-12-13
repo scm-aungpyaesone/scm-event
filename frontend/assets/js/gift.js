@@ -24,10 +24,12 @@ var spWinnerList = "";
 var specialGift = [];
 
 for (let i = 0; i < 3; i++) {
-  if (specialWinner.length == 1) {
-    gender = 1;
-  } else if (specialWinner.length >= 2) {
+  if (specialWinner.length == 0) {
     gender = Math.floor(Math.random() * 2);
+  } else if (specialWinner.length == 1) {
+    gender = 1;
+  } else {
+    gender = 0
   }
 
   var winner = arr1.filter((k) => k.gender == gender && !k.is_excluded);
@@ -38,7 +40,7 @@ for (let i = 0; i < 3; i++) {
     1
   );
 
-  if (specialWinner.length <= 2) {
+  if (specialWinner.length > 1) {
     specialGift = specialGiver.find((j) => j.is_for == gender);
   } else {
     specialGift = specialGiver.find((j) => j.is_for === "mix");
@@ -54,14 +56,14 @@ for (let i = 0; i < 3; i++) {
     specialWinner[i].name
   } </div></div> <div class="gift-detail li-inner"> <div class="gift-name">
   ${
-    specialGift.staff_id
-  } <span>(Special Gift)</span> </div> <img class="gift-img" src="assets/images/gifts/${
+    specialGift.giftName
+  } </div> <img class="gift-img" src="assets/images/gifts/${
     specialWinner[i].gift_img
   }"> </div> </div> </div>`;
 
   giftList.push({
     name: specialWinner[i].name,
-    gift: specialGift.staff_id,
+    gift: specialGift.giftName,
     profile_img: specialWinner[i].profile_img,
     gift_img: specialGift.gift_img,
   });

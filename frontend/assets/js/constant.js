@@ -384,6 +384,7 @@ const gifts = [
     gender: 0,
     is_special: 1,
     is_for: 0,
+    giftName: "Special Gift 3"
   },
   {
     name: "Kyi Myat Noe Soe",
@@ -847,6 +848,7 @@ const gifts = [
     gender: 1,
     is_special: 1,
     is_for: "mix",
+    giftName: "Special Gift 1"
   },
   {
     name: "Thin Thin Moe",
@@ -1062,6 +1064,7 @@ const gifts = [
     gender: 1,
     is_special: 1,
     is_for: 1,
+    giftName: "Special Gift 2"
   },
   {
     name: "Zin Nwe Oo",

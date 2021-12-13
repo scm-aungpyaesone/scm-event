@@ -745,6 +745,10 @@ a.btn {
   padding-right: 0px;
 }
 
+.listo.special .gift-detail {
+  padding: 0;
+}
+
 .receiver-detail .receiver-img {
   width: 36px;
   height: 36px;
