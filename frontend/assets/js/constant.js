@@ -46,6 +46,13 @@ const gifts = [
     gender: 0,
   },
   {
+    name: "Aye Myat Myat Khine",
+    staff_id: "E-00395",
+    profile_img: "aye_myat_myat_khine.png",
+    gift_img: "sample_gift_01.jpg",
+    gender: 1,
+  },
+  {
     name: "Aye Myat Thu",
     staff_id: "E-00384",
     profile_img: "aye_myat_thu.png",
@@ -77,6 +84,13 @@ const gifts = [
     name: "Aye Thandar Moe",
     staff_id: "E-00284",
     profile_img: "aye_thandar_moe.png",
+    gift_img: "sample_gift_01.jpg",
+    gender: 1,
+  },
+  {
+    name: "Chan Myae Khin",
+    staff_id: "E-00396",
+    profile_img: "chan_myae_khin.png",
     gift_img: "sample_gift_01.jpg",
     gender: 1,
   },
@@ -186,6 +200,13 @@ const gifts = [
     gender: 0,
   },
   {
+    name: "Htet Htet Aung",
+    staff_id: "E-00386",
+    profile_img: "htet_htet_aung.jpg",
+    gift_img: "sample_gift_01.jpg",
+    gender: 1,
+  },
+  {
     name: "Htet Htet Khine",
     staff_id: "E-00198",
     profile_img: "htet_htet_khine.JPEG",
@@ -247,6 +268,13 @@ const gifts = [
     profile_img: "kaung_eain_san_htay.jpg",
     gift_img: "sample_gift_01.jpg",
     gender: 1,
+  },
+  {
+    name: "Kaung Khant Naing",
+    staff_id: "E-00387",
+    profile_img: "kaung_khant_naing.jpg",
+    gift_img: "sample_gift_01.jpg",
+    gender: 0,
   },
   {
     name: "Kaung Myat Thu",
@@ -322,6 +350,13 @@ const gifts = [
     name: "Khine Zin Thaw",
     staff_id: "E-00371",
     profile_img: "khine_zin_thaw.jpeg",
+    gift_img: "sample_gift_01.jpg",
+    gender: 1,
+  },
+  {
+    name: "Khin Aye Aye Nyein",
+    staff_id: "E-00393",
+    profile_img: "khin_aye_aye_nyein.jpeg",
     gift_img: "sample_gift_01.jpg",
     gender: 1,
   },
@@ -465,6 +500,20 @@ const gifts = [
     gender: 1,
   },
   {
+    name: "May Thin Khaing",
+    staff_id: "E-00391",
+    profile_img: "may_thin_khaing.jpg",
+    gift_img: "sample_gift_01.jpg",
+    gender: 1,
+  },
+  {
+    name: "May Thinzar",
+    staff_id: "E-00394",
+    profile_img: "may_thin_zar.jpg",
+    gift_img: "sample_gift_01.jpg",
+    gender: 1,
+  },
+  {
     name: "May Thu Kyaw",
     staff_id: "E-00337",
     profile_img: "may_thu_kyaw.jpg",
@@ -592,9 +641,9 @@ const gifts = [
     gender: 1,
   },
   {
-    name: "Naw Khine Khin Htoo Mon",
+    name: "Naw Khaing Khin Htoo Mon",
     staff_id: "E-00357",
-    profile_img: "naw_khine_khin_htoo_mon.png",
+    profile_img: "naw_khaing_khin_htoo_mon.png",
     gift_img: "sample_gift_01.jpg",
     gender: 1,
   },
@@ -602,6 +651,13 @@ const gifts = [
     name: "Nay Lin",
     staff_id: "E-00367",
     profile_img: "nay_lin.png",
+    gift_img: "sample_gift_01.jpg",
+    gender: 0,
+  },
+  {
+    name: "Nay Lin Htoo",
+    staff_id: "E-00388",
+    profile_img: "nay_lin_htoo.png",
     gift_img: "sample_gift_01.jpg",
     gender: 0,
   },
@@ -907,9 +963,9 @@ const gifts = [
     gender: 0,
   },
   {
-    name: "Wah Wah Win Shwe Hlaing",
+    name: "Wah Wah Wynn Shwe Hlaing",
     staff_id: "E-00346",
-    profile_img: "wah_wah_win_shwe_hlaing.JPEG",
+    profile_img: "wah_wah_wynn_shwe_hlaing.JPEG",
     gift_img: "sample_gift_01.jpg",
     gender: 1,
   },
@@ -931,6 +987,13 @@ const gifts = [
     name: "Win Lhan Phyo",
     staff_id: "E-00162",
     profile_img: "win_lhan_phyo.jpg",
+    gift_img: "sample_gift_01.jpg",
+    gender: 0,
+  },
+  {
+    name: "Win Ngwe Phyo",
+    staff_id: "E-00392",
+    profile_img: "win_ngwe_phyo.jpg",
     gift_img: "sample_gift_01.jpg",
     gender: 0,
   },
@@ -992,6 +1055,13 @@ const gifts = [
     gender: 0,
   },
   {
+    name: "Ye Zaw Aung",
+    staff_id: "E-00390",
+    profile_img: "ye_zaw_aung.JPEG",
+    gift_img: "sample_gift_01.jpg",
+    gender: 0,
+  },
+  {
     name: "Yin Yin Aye",
     staff_id: "E-00173",
     profile_img: "yin_yin_aye.JPEG",
@@ -1038,6 +1108,13 @@ const gifts = [
     name: "Zaw Khant Maung",
     staff_id: "E-00268",
     profile_img: "zaw_khant_maung.png",
+    gift_img: "sample_gift_01.jpg",
+    gender: 0,
+  },
+  {
+    name: "Zaw Win Tin",
+    staff_id: "E-00389",
+    profile_img: "zaw_win_tin.png",
     gift_img: "sample_gift_01.jpg",
     gender: 0,
   },
@@ -1174,7 +1251,6 @@ const members = [
   "Chit Su Su Hlaing",
   "Zaw Khant Maung",
   "Hsu Watty Nwe",
-  "Wai Lin Phyo",
   "Min Htet Aung",
   "Htet Shine",
   "Si Thu Bo",
@@ -1253,13 +1329,14 @@ const members = [
   "May Thin Khaing",
   "Ye Zaw Aung",
   "Win Ngwe Phyo",
-  "Khwar Nyo Thin",
   "Khin Aye Aye Nyein",
   "May Thinzar",
   "Aye Myat Myat Khine",
+  "Chan Myae Khin"
 ];
 
 const meetlinks = [
+  "https://meet.google.com/aaa-aaa-bbb",
   "https://meet.google.com/aaa-aaa-bbb",
   "https://meet.google.com/aaa-aaa-bbb",
   "https://meet.google.com/aaa-aaa-bbb",
@@ -1286,8 +1363,22 @@ var managers = [
   "Shwe Yi Pyae Soan",
   "Myat Mon Thein",
   "Zin May Thu",
+  "横内 慎太朗",
+  "京和 将史",
+  "中村 駿哉",
+  "吉田 慎",
+  "清水 美南海",
+  "福井 隆介",
+  "渡邊",
+  "Aye Moh Moh Thu",
+  "Htet Htet Aung",
+  "Htet Htet Khine",
+  "May Thu Khine Soe",
+  "Cherry Zaw",
+  "Chaw Su Su Nyein",
+  "San Mya Thida",
 ];
 
-const total_group_for_tenmembers = 6;
+const total_group_for_tenmembers = 5;
 const max_member = 10;
 const min_member = 9;

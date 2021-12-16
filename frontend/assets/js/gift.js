@@ -87,7 +87,7 @@ while (arr1.length) {
   listnum++;
 
   $(".list-container").append(
-    `<div class="listo"> <div class="list-box"> <div class="num-detail li-inner"> ` +
+    `<div class="listo normal"> <div class="list-box"> <div class="num-detail li-inner"> ` +
       listnum +
       `</div> <div class="receiver-detail li-inner"> <img class="receiver-img" src="assets/images/members/${receiver.profile_img}"> <div class="receiver-name">` +
       receiver.name +

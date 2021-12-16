@@ -12,10 +12,17 @@ while (i--) {
 
 var managerList = "";
 for (let i = 0; i < managers.length; i++) {
-  managerList += `<li><span>${i + 1}.</span><span>${managers[i]}</span></li>`;
+  if (i < 8) {
+    managerList += `<li><span class="list-num">${i + 1}.</span><span>${managers[i]}</span></li>`;
+  }
+  else if (i > 8 && i < 15) {
+    managerList += `<li><span class="list-num">${i + 1}.</span><span class="jp-txt">シアトル ${managers[i]}</span></li>`;
+  } else if (i >= 15) {
+    managerList += `<li><span class="list-num">${i + 1}.</span><span class="jp-txt">シアトル </span><span class="en-txt"> ${managers[i]} </span></li>`;
+  }
 }
 $(".group-container")
-  .append(`<div class="group-list"> <div class="gp-head">Manager Group</div> 
+  .append(`<div class="group-list manager-list"> <div class="gp-head">Manager Group</div> 
       <ul class="gp-content"> ${managerList}
       </ul> <span class="meet-link">${meetlinks[0]}</span> </div>`);
 
@@ -38,6 +45,9 @@ for (var i = 0; i < leaders.length; i++) {
     });
   } else {
     for (let j = 0; j < min_member; j++) {
+      if (randomMembers[index] == null) {
+        break;
+      }
       member.push(randomMembers[index]);
       memberList += `<li><span>${j + 1}.</span><span>${
         randomMembers[index]
