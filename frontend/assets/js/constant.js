@@ -272,7 +272,7 @@ const gifts = [
   {
     name: "Kaung Khant Naing",
     staff_id: "E-00387",
-    profile_img: "kaung_khant_naing.jpeg",
+    profile_img: "kaung_khant_naing.JPEG",
     gift_img: "sample_gift_01.jpg",
     gender: 0,
   },
@@ -502,7 +502,7 @@ const gifts = [
   {
     name: "May Thin Khaing",
     staff_id: "E-00391",
-    profile_img: "may_thin_khaing.jpeg",
+    profile_img: "may_thin_khaing.JPEG",
     gift_img: "sample_gift_01.jpg",
     gender: 1,
   },
@@ -657,7 +657,7 @@ const gifts = [
   {
     name: "Nay Lin Htoo",
     staff_id: "E-00388",
-    profile_img: "nay_lin_htoo.jpeg",
+    profile_img: "nay_lin_htoo.JPEG",
     gift_img: "sample_gift_01.jpg",
     gender: 0,
   },
@@ -1057,7 +1057,7 @@ const gifts = [
   {
     name: "Ye Zaw Aung",
     staff_id: "E-00390",
-    profile_img: "ye_zaw_aung.jpeg",
+    profile_img: "ye_zaw_aung.JPEG",
     gift_img: "sample_gift_01.jpg",
     gender: 0,
   },
