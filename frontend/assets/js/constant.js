@@ -49,7 +49,7 @@ const gifts = [
     name: "Aye Myat Myat Khine",
     staff_id: "E-00395",
     profile_img: "aye_myat_myat_khine.jpg",
-    gift_img: "sample_gift_01.jpg",
+    gift_img: "aye_myat_myat_khine.jpg",
     gender: 1,
   },
   {
@@ -203,7 +203,7 @@ const gifts = [
     name: "Htet Htet Aung",
     staff_id: "E-00386",
     profile_img: "htet_htet_aung.jpeg",
-    gift_img: "sample_gift_01.jpg",
+    gift_img: "htet_htet_aung.JPEG",
     gender: 1,
   },
   {
@@ -273,7 +273,7 @@ const gifts = [
     name: "Kaung Khant Naing",
     staff_id: "E-00387",
     profile_img: "kaung_khant_naing.JPEG",
-    gift_img: "sample_gift_01.jpg",
+    gift_img: "kaung_khant_naing.JPEG",
     gender: 0,
   },
   {
@@ -510,7 +510,7 @@ const gifts = [
     name: "May Thinzar",
     staff_id: "E-00394",
     profile_img: "may_thinzar.jpg",
-    gift_img: "sample_gift_01.jpg",
+    gift_img: "may_thinzar.jpg",
     gender: 1,
   },
   {
@@ -658,7 +658,7 @@ const gifts = [
     name: "Nay Lin Htoo",
     staff_id: "E-00388",
     profile_img: "nay_lin_htoo.JPEG",
-    gift_img: "sample_gift_01.jpg",
+    gift_img: "nay_lin_htoo.jpeg",
     gender: 0,
   },
   {
@@ -820,7 +820,7 @@ const gifts = [
     name: "Su Yee Win",
     staff_id: "E-00098",
     profile_img: "su_yee_win.jpg",
-    gift_img: "sample_gift_01.jpg",
+    gift_img: "su_yee_win.JPEG",
     is_excluded: 1,
     gender: 1,
   },
@@ -994,7 +994,7 @@ const gifts = [
     name: "Win Ngwe Phyo",
     staff_id: "E-00392",
     profile_img: "win_ngwe_phyo.jpeg",
-    gift_img: "sample_gift_01.jpg",
+    gift_img: "win_ngwe_phyo.JPEG",
     gender: 0,
   },
   {
@@ -1058,7 +1058,7 @@ const gifts = [
     name: "Ye Zaw Aung",
     staff_id: "E-00390",
     profile_img: "ye_zaw_aung.JPEG",
-    gift_img: "sample_gift_01.jpg",
+    gift_img: "ye_zaw_aung.png",
     gender: 0,
   },
   {
@@ -1115,7 +1115,7 @@ const gifts = [
     name: "Zaw Win Tin",
     staff_id: "E-00389",
     profile_img: "zaw_win_tin.png",
-    gift_img: "sample_gift_01.jpg",
+    gift_img: "zaw_win_tin.png",
     gender: 0,
   },
   {
@@ -1337,21 +1337,21 @@ const members = [
 
 const meetlinks = [
   "https://meet.google.com/aaa-aaa-bbb",
-  "https://meet.google.com/aaa-aaa-bbb",
-  "https://meet.google.com/aaa-aaa-bbb",
-  "https://meet.google.com/aaa-aaa-bbb",
-  "https://meet.google.com/aaa-aaa-bbb",
-  "https://meet.google.com/aaa-aaa-bbb",
-  "https://meet.google.com/aaa-aaa-bbb",
-  "https://meet.google.com/aaa-aaa-bbb",
-  "https://meet.google.com/aaa-aaa-bbb",
-  "https://meet.google.com/aaa-aaa-bbb",
-  "https://meet.google.com/aaa-aaa-bbb",
-  "https://meet.google.com/aaa-aaa-bbb",
-  "https://meet.google.com/aaa-aaa-bbb",
-  "https://meet.google.com/aaa-aaa-bbb",
-  "https://meet.google.com/aaa-aaa-bbb",
-  "https://meet.google.com/aaa-aaa-bbb",
+  "https://meet.google.com/cad-owpr-cxg",
+  "https://meet.google.com/vhv-yxbs-sky",
+  "https://meet.google.com/koe-veyg-hse",
+  "https://meet.google.com/tza-iggh-evb",
+  "https://meet.google.com/zbp-bxze-mqs",
+  "https://meet.google.com/goi-yewi-tyr",
+  "https://meet.google.com/xgi-vqqb-rgj",
+  "https://meet.google.com/rgo-nhim-jmd",
+  "https://meet.google.com/fhp-tdro-zoj",
+  "https://meet.google.com/ahs-dzqe-irn",
+  "https://meet.google.com/msp-imsd-ute",
+  "https://meet.google.com/bua-obvp-tii",
+  "https://meet.google.com/sze-xwrp-qnr",
+  "https://meet.google.com/vnv-mzkv-hex",
+  "https://meet.google.com/voq-mouu-jmj",
 ];
 
 var managers = [
