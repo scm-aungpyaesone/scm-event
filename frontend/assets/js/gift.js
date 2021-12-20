@@ -58,7 +58,7 @@ for (let i = 0; i < 3; i++) {
   ${
     specialGift.giftName
   } </div> <img class="gift-img" src="assets/images/gifts/${
-    specialWinner[i].gift_img
+    specialGift.gift_img
   }"> </div> </div> </div>`;
 
   giftList.push({

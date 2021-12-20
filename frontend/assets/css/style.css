@@ -743,6 +743,7 @@ a.btn {
   width: 65px;
   height: 65px;
   border-radius: 5px;
+  object-fit: cover;
 }
 
 .listo.special {
