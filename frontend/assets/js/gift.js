@@ -74,12 +74,12 @@ $(".list-container").append(spWinnerList);
 var listnum = 3;
 while (arr1.length) {
   var receiver = arr1.map((a) => a).shift();
-  if (arr2.map((a) => a.name)[0] == receiver.name) {
-    gift = arr2.map((g) => g).shift();
-    arr2.shift();
-  } else {
+  if (arr2.map((a) => a.staff_id)[0] == receiver.staff_id) {
     gift = arr2.map((g) => g).pop();
     arr2.pop();
+  } else {
+    gift = arr2.map((g) => g).shift();
+    arr2.shift();
   }
 
   arr1.shift();

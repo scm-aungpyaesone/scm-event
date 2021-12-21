@@ -414,7 +414,7 @@ const gifts = [
     name: "Kyaw Soe Naing",
     staff_id: "E-00044",
     profile_img: "kyaw_soe_naing.png",
-    gift_img: "special_gift_3.JPEG",
+    gift_img: "special_gift_3.jpg",
     is_excluded: 1,
     gender: 0,
     is_special: 1,
@@ -899,7 +899,7 @@ const gifts = [
     name: "Thin Muyar Win",
     staff_id: "E-00063",
     profile_img: "thin_muyar_win.jpg",
-    gift_img: "special_gift_1.JPEG",
+    gift_img: "special_gift_1.jpg",
     is_excluded: 1,
     gender: 1,
     is_special: 1,
@@ -1136,7 +1136,7 @@ const gifts = [
     name: "Zin May Thu",
     staff_id: "E-00062",
     profile_img: "zin_may_thu.JPEG",
-    gift_img: "special_gift_2.JPEG",
+    gift_img: "special_gift_2.jpg",
     is_excluded: 1,
     gender: 1,
     is_special: 1,
@@ -1336,7 +1336,7 @@ const members = [
 ];
 
 const meetlinks = [
-  "https://meet.google.com/aaa-aaa-bbb",
+  "https://zoom.us/j/92599609444?pwd=OEMrZjQrNVRtcm5ucUlyQ0tOcTVLZz09",
   "https://meet.google.com/cad-owpr-cxg",
   "https://meet.google.com/vhv-yxbs-sky",
   "https://meet.google.com/koe-veyg-hse",
