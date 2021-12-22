@@ -91,7 +91,7 @@ const gifts = [
     name: "Chan Myae Khin",
     staff_id: "E-00396",
     profile_img: "chan_myae_khin.jpg",
-    gift_img: "sample_gift_01.jpg",
+    gift_img: "chan_myae_khin.jpg",
     gender: 1,
   },
   {
@@ -1161,7 +1161,7 @@ const gifts = [
     name: "Zune Thi Cho",
     staff_id: "E-00076",
     profile_img: "zune_thi_cho.png",
-    gift_img: "sample_gift_01.jpg",
+    gift_img: "zune_thi_cho.JPEG",
     is_excluded: 1,
     gender: 1,
   },
