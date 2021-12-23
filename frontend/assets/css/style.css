@@ -1139,12 +1139,10 @@ a.btn {
   height: auto;
   margin-bottom: 25px;
   border: 1px solid #FFFFFF;
-  background-color: rgba(36, 63, 94, 0.3);
+  background-color: rgba(36, 63, 94, 0.9);
   color: #FFFFFF;
   font-family: 'Gabriola';
   border-radius: 20px;
-  -webkit-backdrop-filter: saturate(110%) blur(30px);
-  backdrop-filter: saturate(110%) blur(30px);
 }
 
 .group-list.manager-list {
@@ -1372,9 +1370,4 @@ a.btn {
   }
 }
 
-@-moz-document url-prefix() {
-  .group-list {
-      background-color: rgba(36, 63, 94, 0.9);
-  }
-}
 
