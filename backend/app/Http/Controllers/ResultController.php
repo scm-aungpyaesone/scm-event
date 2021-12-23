@@ -127,8 +127,11 @@ class ResultController extends Controller
                     <title>Nomikai Result</title>
                     <meta charset="UTF-8">
                     <style>
+                    @font-face {
+                        font-family: ipag;
+                    }
                     body {
-                        font-family: Arial, Helvetica, sans-serif;
+                        font-family: Arial, Helvetica, ipag, sans-serif;
                         letter-spacing: 0.2px;
                     }
                     h1 {
@@ -159,18 +162,24 @@ class ResultController extends Controller
                         border-left: 1px solid #EEE7DB;
                     }
                     table tbody tr td:first-child {
+                        width: 10%;
                         border-left: 1px solid #EEE7DB;
                     }
                     table tbody tr:nth-child(even) td { 
                         background: #CFCFFF; 
                         color: #000000; 
                     }
+                    table tbody tr td:nth-child(2) {
+                        width: 30%;
+                    }
                     table tbody tr td:nth-child(3) {
                         text-align: left;
+                        width: 45%;
                         padding: 10px;
                     }
                     table tbody tr td:nth-child(4) {
-                        width: 300px;
+                        width: 15%;
+                        padding: 10px;
                     }
                     </style>
                 </head>
@@ -213,7 +222,8 @@ class ResultController extends Controller
             "margin_top" => 15,
             "margin_bottom" => 20,
             "margin_header" => 10,
-            "margin_footer" => 10
+            "margin_footer" => 10,
+            "default_font" => "ipag",
         ]);
 
         $mpdf->WriteHTML($pdf_data);

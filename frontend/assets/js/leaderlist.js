@@ -26,6 +26,19 @@ $(".group-container")
       <ul class="gp-content"> ${managerList}
       </ul> <span class="meet-link">${meetlinks[0]}</span> </div>`);
 
+groupList.push({
+  leader: managers[0],
+  members: [],
+  meet_link: meetlinks[0],
+});
+for (let i = 1; i < managers.length; i++) {
+  if (i > 8) {
+    groupList[0].members.push("シアトル " + managers[i]);
+  } else {
+    groupList[0].members.push(managers[i]);
+  }
+}
+
 var index = 0;
 for (var i = 0; i < leaders.length; i++) {
   var memberList = "";
@@ -41,7 +54,7 @@ for (var i = 0; i < leaders.length; i++) {
     groupList.push({
       leader: leaders[i],
       members: member,
-      meet_link: meetlinks[i],
+      meet_link: meetlinks[i+1],
     });
   } else {
     for (let j = 0; j < min_member; j++) {
@@ -57,7 +70,7 @@ for (var i = 0; i < leaders.length; i++) {
     groupList.push({
       leader: leaders[i],
       members: member,
-      meet_link: meetlinks[i],
+      meet_link: meetlinks[i+1],
     });
   }
   $(".group-container")
@@ -66,6 +79,7 @@ for (var i = 0; i < leaders.length; i++) {
       </ul> <span class="meet-link">${meetlinks[i+1]}</span> </div>`);
 }
 
+console.log(groupList)
 $.ajax({
   type: "POST",
   url: API_URL + "/save-nomikai",
