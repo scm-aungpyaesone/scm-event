@@ -79,7 +79,6 @@ for (var i = 0; i < leaders.length; i++) {
       </ul> <span class="meet-link">${meetlinks[i+1]}</span> </div>`);
 }
 
-console.log(groupList)
 $.ajax({
   type: "POST",
   url: API_URL + "/save-nomikai",

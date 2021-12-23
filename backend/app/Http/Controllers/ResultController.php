@@ -146,7 +146,7 @@ class ResultController extends Controller
                     table thead th {
                         background-color:#25405F; 
                         color:#FFFFFF; 
-                        font-size: 20px; 
+                        font-size: 30px; 
                         font-weight: bold; 
                         border: 1px solid #EEE7DB;
                         padding: 10px 0;
@@ -154,7 +154,7 @@ class ResultController extends Controller
                     table tbody td { 
                         color: #000000; 
                         border: 1px solid #EEE7DB;
-                        font-size: 14px;
+                        font-size: 20px;
                         font-weight: normal;
                         padding: 10px 0;
                     }
@@ -174,12 +174,12 @@ class ResultController extends Controller
                     }
                     table tbody tr td:nth-child(3) {
                         text-align: left;
-                        width: 45%;
+                        width: 48%;
                         padding: 10px;
                     }
                     table tbody tr td:nth-child(4) {
-                        width: 15%;
                         padding: 10px;
+                        width: 12%;
                     }
                     </style>
                 </head>
