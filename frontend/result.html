@@ -1,63 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gift Exchange App</title>
-  <!--CSS-->
-  <link rel="icon" href="assets/images/svg/ico_xmas.svg"/>
-  <link rel="stylesheet" href="assets/css/reset.css">
-  <link rel="stylesheet" href="assets/css/style.css"/>
-  <link rel="stylesheet" href="assets/css/anim.css"/>
-</head>
-<body>
-  <div id="resultPage">
-    <div id="layout">
-      <canvas id="snowAnim" class="loading"></canvas>
-      <div id="loader">
-        <div class="loading-anim">
-          <div class="top-decor">
-            <img class="loading-decor" src="assets/images/svg/loading_asset01.svg" alt="loading-decor-img">
-            <img class="loading-decor" src="assets/images/svg/loading_asset07.svg" alt="loading-decor-img">
-            <img class="loading-decor" src="assets/images/svg/loading_asset02.svg" alt="loading-decor-img">
-            <img class="loading-decor" src="assets/images/svg/loading_asset08.svg" alt="loading-decor-img">
-            <img class="loading-decor" src="assets/images/svg/loading_asset03.svg" alt="loading-decor-img">
-            <img class="loading-decor" src="assets/images/svg/loading_asset09.svg" alt="loading-decor-img">
-            <img class="loading-decor" src="assets/images/svg/loading_asset04.svg" alt="loading-decor-img">
-            <img class="loading-decor" src="assets/images/svg/loading_asset10.svg" alt="loading-decor-img">
-            <img class="loading-decor" src="assets/images/svg/loading_asset05.svg" alt="loading-decor-img">
-            <img class="loading-decor" src="assets/images/svg/loading_asset11.svg" alt="loading-decor-img">
-            <img class="loading-decor" src="assets/images/svg/loading_asset06.svg" alt="loading-decor-img">
-          </div>
-          <div class="loading-txt">
-            <span>Finding your gift!</span>
-          </div>
-          <div class="jumping-dots-loader"> <span></span> <span></span> <span></span> </div>
-        </div>
-      </div>
-      <div class="header">
-        <div class="head_inner flex">
-          <h1 class="logo">
-            <img src="assets/images/svg/logo_xmas.svg" alt="SCM Logo">
-          </h1>
-        </div>
-      </div> <!--/.header-->
-      <div id="wrapper">
-        <div class="main">
-          <div class="content">
-            <div class="event-info">
-              <h2 class="info-ttl">"Every gift from a friend is a wish for your happiness."</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gift Exchange App</title>
+    <!--CSS-->
+    <link rel="icon" href="assets/images/svg/ico_xmas.svg" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/anim.css" />
+  </head>
+  <body>
+    <div id="resultPage">
+      <div id="layout">
+        <canvas id="snowAnim" class="loading"></canvas>
+        <div id="loader">
+          <div class="loading-anim">
+            <div class="top-decor">
+              <img
+                class="loading-decor"
+                src="assets/images/svg/loading_asset01.svg"
+                alt="loading-decor-img"
+              />
+              <img
+                class="loading-decor"
+                src="assets/images/svg/loading_asset07.svg"
+                alt="loading-decor-img"
+              />
+              <img
+                class="loading-decor"
+                src="assets/images/svg/loading_asset02.svg"
+                alt="loading-decor-img"
+              />
+              <img
+                class="loading-decor"
+                src="assets/images/svg/loading_asset08.svg"
+                alt="loading-decor-img"
+              />
+              <img
+                class="loading-decor"
+                src="assets/images/svg/loading_asset03.svg"
+                alt="loading-decor-img"
+              />
+              <img
+                class="loading-decor"
+                src="assets/images/svg/loading_asset09.svg"
+                alt="loading-decor-img"
+              />
+              <img
+                class="loading-decor"
+                src="assets/images/svg/loading_asset04.svg"
+                alt="loading-decor-img"
+              />
+              <img
+                class="loading-decor"
+                src="assets/images/svg/loading_asset10.svg"
+                alt="loading-decor-img"
+              />
+              <img
+                class="loading-decor"
+                src="assets/images/svg/loading_asset05.svg"
+                alt="loading-decor-img"
+              />
+              <img
+                class="loading-decor"
+                src="assets/images/svg/loading_asset11.svg"
+                alt="loading-decor-img"
+              />
+              <img
+                class="loading-decor"
+                src="assets/images/svg/loading_asset06.svg"
+                alt="loading-decor-img"
+              />
             </div>
-            <div id="eventResults">
-              <div class="results-wrapper">
-                <div class="results-container">
-                  <div class="list-wrapper">
-                    <div class="list-container">
-                      <a href="nomikai_index.html" class="btn nomi-btn">
-                        To Dinner Page
-                      </a>
-                      <div class="divider"></div>
+            <div class="loading-txt">
+              <span>Finding your gift!</span>
+            </div>
+            <div class="jumping-dots-loader">
+              <span></span> <span></span> <span></span>
+            </div>
+          </div>
+        </div>
+        <div class="header">
+          <div class="head_inner flex">
+            <h1 class="logo">
+              <img src="assets/images/svg/logo_xmas.svg" alt="SCM Logo" />
+            </h1>
+          </div>
+        </div>
+        <!--/.header-->
+        <div id="wrapper">
+          <div class="main">
+            <div class="content">
+              <div class="event-info">
+                <h2 class="info-ttl">
+                  "Every gift from a friend is a wish for your happiness."
+                </h2>
+              </div>
+              <div id="eventResults">
+                <div class="results-wrapper">
+                  <div class="results-container">
+                    <div class="list-wrapper">
+                      <div class="list-container">
+                        <a href="nomikai_index.html" class="btn nomi-btn">
+                          To Dinner Page
+                        </a>
+                        <div class="divider"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -67,88 +117,98 @@
         </div>
       </div>
     </div>
-  </div>
-  <!--JS-->
-  <script src="assets/js/lib/jquery-3.6.0.min.js"></script>
-  <script src="assets/js/constant.js"></script>
-  <script src="assets/js/gift.js"></script>
-  <script src="assets/js/lib/TweenMax.min.js"></script>
-  <script src="assets/js/lib/anime.min.js"></script>
-  <script src="assets/js/anim.js"></script>
-  <script>
-    $(document).ready(function () {
-    var scrollTop     = $(window).scrollTop(),
-        elementOffset = $('.results-wrapper').offset().top,
-        distance = (elementOffset - scrollTop);
-    
-    $(window).scroll(function (e) {
-      var $el = $('.results-wrapper');
-      var isPositionFixed = ($el.css('position') == 'fixed');
-      if ($(this).scrollTop() > 314 && !isPositionFixed) {
-        $el.css({ 'position': 'fixed', 'top': '0px', 'left' : '0px', 'right' : '0px' });
-      }
-      if ($(this).scrollTop() < 314 && isPositionFixed) {
-        $el.css({ 'position': 'relative', 'top': '0px'});
-      }
-    }); 
+    <!--JS-->
+    <script src="assets/js/lib/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/constant.js"></script>
+    <script src="assets/js/gift.js"></script>
+    <script src="assets/js/lib/TweenMax.min.js"></script>
+    <script src="assets/js/lib/anime.min.js"></script>
+    <script src="assets/js/anim.js"></script>
+    <script>
+      $(document).ready(function () {
+        var scrollTop = $(window).scrollTop(),
+          elementOffset = $(".results-wrapper").offset().top,
+          distance = elementOffset - scrollTop;
 
-    var giftLoadingAnim = anime.timeline();
+        $(window).scroll(function (e) {
+          var $el = $(".results-wrapper");
+          var isPositionFixed = $el.css("position") == "fixed";
+          if ($(this).scrollTop() > 314 && !isPositionFixed) {
+            $el.css({
+              position: "fixed",
+              top: "0px",
+              left: "0px",
+              right: "0px",
+            });
+          }
+          if ($(this).scrollTop() < 314 && isPositionFixed) {
+            $el.css({ position: "relative", top: "0px" });
+          }
+        });
 
-    giftLoadingAnim
-    .add({
-      targets: '.loading-decor',
-      duration: 1600,
-      translateY: {
-        value: [0, 270],
-        delay: anime.stagger(100),
-      },
-      easing: 'easeInOutCubic',
-    })
-    .add({
-      targets: '.loading-decor',
-      duration: 1600,
-      translateY: {
-        value: [270, 0],
-        delay: anime.stagger(100, {from:'last'}),
-      },
-      easing: 'easeInOutCubic',
-    }, 4400)
-    .add({
-      targets: '#loader',
-      delay: 6000,
-      duration: 800,
-      opacity: [1,0],
-      easing: 'easeInOutCubic'
-    }, 0)
-    .add({
-      targets: '.listo.special',
-      translateY: [400,0],
-      opacity: [0,1],
-      duration: 1000,
-      delay: anime.stagger(100),
-      easing: 'easeInOutQuad'
-    })
-    .add({
-      targets: '.listo.normal',
-      translateY: [400,0],
-      opacity: [0,1],
-      duration: 800,
-      easing: 'easeInOutCubic'
-    })
-    .add({
-      targets: '.divider',
-      opacity: [0,0.4],
-      duration: 800,
-      easing: 'easeInOutCubic'
-    })
+        var giftLoadingAnim = anime.timeline();
 
-    $(window).ready(function () {
-      setInterval(() => {
-        $("#loader, #layout").addClass('loaded');
-        $('#snowAnim').removeClass('loading');
-      }, 6800);
-    });
-  });
-  </script>
-</body>
+        giftLoadingAnim
+          .add({
+            targets: ".loading-decor",
+            duration: 1600,
+            translateY: {
+              value: [0, 270],
+              delay: anime.stagger(100),
+            },
+            easing: "easeInOutCubic",
+          })
+          .add(
+            {
+              targets: ".loading-decor",
+              duration: 1600,
+              translateY: {
+                value: [270, 0],
+                delay: anime.stagger(100, { from: "last" }),
+              },
+              easing: "easeInOutCubic",
+            },
+            4400
+          )
+          .add(
+            {
+              targets: "#loader",
+              delay: 6000,
+              duration: 800,
+              opacity: [1, 0],
+              easing: "easeInOutCubic",
+            },
+            0
+          )
+          .add({
+            targets: ".listo.special",
+            translateY: [400, 0],
+            opacity: [0, 1],
+            duration: 1000,
+            delay: anime.stagger(100),
+            easing: "easeInOutQuad",
+          })
+          .add({
+            targets: ".listo.normal",
+            translateY: [400, 0],
+            opacity: [0, 1],
+            duration: 800,
+            easing: "easeInOutCubic",
+          })
+          .add({
+            targets: ".divider",
+            opacity: [0, 0.4],
+            duration: 800,
+            easing: "easeInOutCubic",
+          });
+
+        $(window).ready(function () {
+          setInterval(() => {
+            $("#loader, #layout").addClass("loaded");
+            $("#snowAnim").removeClass("loading");
+          }, 6800);
+        });
+      });
+    </script>
+  </body>
 </html>
